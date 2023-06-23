@@ -136,11 +136,43 @@ header {
             }
 
         }
-        .box_2{
+
+        .box_2 {
             height: 50px;
             color: black;
             padding: 15px;
             font-family: 'Open Sans', sans-serif;
         }
+    }
+}
+
+@media (max-width:1000px) {
+    .container_1 {
+        position: relative;
+        padding: 25px 0 55px !important;
+
+        .search-container {
+            position: absolute;
+            width: 100% !important;
+            bottom: 0;
+        }
+
+        .box_1{
+            img{
+                height: 40px !important;
+            }
+        }
+        .box_2{
+            .pi-heart{
+                display: none !important;
+            }
+            .pkrSpan{
+                display: none !important;
+            }
+        }
+    }
+
+    .container_2 {
+        display: none !important;
     }
 }
