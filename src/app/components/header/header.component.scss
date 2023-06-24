@@ -78,6 +78,22 @@ header {
                 font-size: 25px;
                 transition: all .3s ease-in-out;
                 cursor: pointer;
+                position: relative;
+
+                .number {
+                    position: absolute;
+                    font-size: 10px;
+                    top: 0;
+                    right: -5px;
+                    color: black;
+                    background-color: var(--main_rgb_1);
+                    height: 15px;
+                    width: 15px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
 
                 &:hover {
                     color: var(--main_rgb_2);
@@ -157,16 +173,18 @@ header {
             bottom: 0;
         }
 
-        .box_1{
-            img{
+        .box_1 {
+            img {
                 height: 40px !important;
             }
         }
-        .box_2{
-            .pi-heart{
+
+        .box_2 {
+            .pi-heart {
                 display: none !important;
             }
-            .pkrSpan{
+
+            .pkrSpan {
                 display: none !important;
             }
         }

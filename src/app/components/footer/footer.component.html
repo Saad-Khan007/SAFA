@@ -1,1 +1,29 @@
-<p>footer works!</p>
+<div class="container">
+    <div class="box-1">
+        <div class="box1">
+            <div class="footer-box">
+                <h2>ABOUT US</h2>
+                <ul>
+                    <li>Providing top-quality firearms, ammunition, and tactical gear for confident shooters. Shop with
+                        us for a comprehensive selection and exceptional service.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="footer-box" *ngFor="let box of footerBoxes">
+                <h2>{{ box.title }}</h2>
+                <ul>
+                    <li *ngFor="let item of box.items">{{ item }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="box-2">
+        <div class="box">
+            <ul>
+                <li *ngFor="let item of externalLinks">{{ item }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="footer">Powered By <a href="https://sba-dev.netlify.app/">SBA-Developer</a> © 2023</div>
