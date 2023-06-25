@@ -9,3 +9,52 @@
         </div>
     </div>
 </div>
+<div class="latest-blog-container">
+    <div class="latest-blog-header">
+        <h3>Latest Blog</h3>
+        <div class="latest-blog-btn">
+            <i class="pi pi-angle-left"></i>
+            <i class="pi pi-angle-right"></i>
+        </div>
+    </div>
+    <div class="latest-blogs-box">
+        <div class="latest-blog-card" *ngFor="let card of latestBlogCards">
+            <img src="{{card.img}}">
+            <div class="latest-blog-card-title">{{card.title}}</div>
+            <div class="latest-blog-card-desc">{{card.desc}}</div>
+            <div class="rule-box-date">
+                <h3>{{card.date}}</h3>
+                <span>{{card.month}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="rules-container">
+    <div class="rules-box" *ngFor="let rule of delieveryRulesBoxes">
+        <img src="{{rule.img}}">
+        <div class="rules-text">
+            <h3>{{rule.title}}</h3>
+            <p>{{rule.desc}}</p>
+        </div>
+    </div>
+</div>
+<div class="news-letter-container">
+    <div class="news-letter-text">
+        Our Latest Newsletter
+    </div>
+    <div class="news-letter-subscribe-bar">
+        <div class="search-container">
+            <input type="text" placeholder="Your email address">
+            <div class="search-icon">
+                Subscribe
+            </div>
+        </div>
+    </div>
+    <div class="news-letter-social-media">
+        <span>Follow us :</span>
+        <i class="pi pi-facebook"></i>
+        <i class="pi pi-twitter"></i>
+        <i class="pi pi-youtube"></i>
+        <i class="fa-brands fa-pinterest-p"></i>
+    </div>
+</div>
