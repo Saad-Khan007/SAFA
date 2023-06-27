@@ -8,6 +8,75 @@
         </div>
     </div>
 </div>
+<div class="daily-deal-container">
+    <div class="header">
+        <h3>Daily Deals</h3>
+        <div class="btn">
+            <i class="pi pi-angle-left"></i>
+            <i class="pi pi-angle-right"></i>
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="card">
+            <div class="img-container">
+                <img class="main-img" src="../../../assets/Img/Category/img-5.jpg">
+                <div class="img-box">
+                    <img class="secondary-img" src="../../../assets/Img/Category/img-5-1.jpg">
+                    <img class="secondary-img" src="../../../assets/Img/Category/img-5-2.jpg">
+                </div>
+            </div>
+            <div class="text-container">
+                <h6>Knife</h6>
+                <h1>Hunting Knife</h1>
+                <span>$122.00</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, debitis.</p>
+                <div class="icons">
+                    <i class="pi pi-cart-plus"></i>
+                    <i class="pi pi-heart"></i>
+                </div>
+                <div class="time">
+                    <span>758 D  :</span>
+                    <span> 8 H  :</span>
+                    <span> 21 M  :</span>
+                    <span class="sec"> 30 S</span>
+                </div>
+                <div class="stock">
+                    <span>Availability : </span>
+                    <h6>298 In Stocks</h6>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img-container">
+                <img class="main-img" src="../../../assets/Img/Category/img-4.jpg">
+                <div class="img-box">
+                    <img class="secondary-img" src="../../../assets/Img/Category/img-4-1.jpg">
+                    <img class="secondary-img" src="../../../assets/Img/Category/img-4-2.jpg">
+                </div>
+            </div>
+            <div class="text-container">
+                <h6>Rifle</h6>
+                <h1>Assault Rifle M-16</h1>
+                <span>$500.00</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, debitis.</p>
+                <div class="icons">
+                    <i class="pi pi-cart-plus"></i>
+                    <i class="pi pi-heart"></i>
+                </div>
+                <div class="time">
+                    <span>758 D  :</span>
+                    <span> 8 H  :</span>
+                    <span> 21 M  :</span>
+                    <span class="sec"> 30 S</span>
+                </div>
+                <div class="stock">
+                    <span>Availability : </span>
+                    <h6>298 In Stocks</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="category-container">
     <div class="black-overlay">
         <div class="header">
@@ -18,81 +87,14 @@
             </div>
         </div>
         <div class="card-container">
-            <div class="card">
-                <img src="../../../assets/Category/img-1.jpg">
+            <div class="card" *ngFor="let card of categories">
+                <img src="{{card.img}}">
                 <div class="card-text">
-                    <h3>Pistol</h3>
-                    <span>Derringers</span>
-                    <span>Pocket Pistols</span>
-                    <span>Double-Action Pistols</span>
-                    <span>Semi-automatic Pistols</span>
-                    <span class="button">View More
-                        <i class="fa-solid fa-play"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="card">
-                <img src="../../../assets/Category/img-2.jpg">
-                <div class="card-text">
-                    <h3>Generade</h3>
-                    <span>Flash Grenade</span>
-                    <span>Smoke Grenade</span>
-                    <span>Concussion Grenade</span>
-                    <span>Fragmentation Grenade</span>
-                    <span class="button">View More
-                        <i class="fa-solid fa-play"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="card">
-                <img src="../../../assets/Category/img-3.jpg">
-                <div class="card-text">
-                    <h3>Sniper</h3>
-                    <span>Sako TRG</span>
-                    <span>Dragunov SVD</span>
-                    <span>Barrett M82/M107</span>
-                    <span>Mosin-Nagant M91/30</span>
-                    <span class="button">View More
-                        <i class="fa-solid fa-play"></i>
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div class="card-container card-container-2">
-            <div class="card">
-                <img src="../../../assets/Category/img-4.jpg">
-                <div class="card-text">
-                    <h3>Rifle</h3>
-                    <span>Assault Rifle</span>
-                    <span>Bolt-Action Rifle</span>
-                    <span>Lever-Action Rifle</span>
-                    <span>Semi-Automatic Rifle</span>
-                    <span class="button">View More
-                        <i class="fa-solid fa-play"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="card">
-                <img src="../../../assets/Category/img-5.jpg">
-                <div class="card-text">
-                    <h3>Knife</h3>
-                    <span>Pocket Knife</span>
-                    <span>Tactical Knife</span>
-                    <span>Survival Knife</span>
-                    <span>Hunting Knife</span>
-                    <span class="button">View More
-                        <i class="fa-solid fa-play"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="card">
-                <img src="../../../assets/Category/img-6.jpg">
-                <div class="card-text">
-                    <h3>Armor</h3>
-                    <span>Shield</span>
-                    <span>Helmet</span>
-                    <span>Plate Armor</span>
-                    <span>Brigandine Armor</span>
+                    <h3>{{card.type}}</h3>
+                    <span>{{card.name[0]}}</span>
+                    <span>{{card.name[1]}}</span>
+                    <span>{{card.name[2]}}</span>
+                    <span>{{card.name[3]}}</span>
                     <span class="button">View More
                         <i class="fa-solid fa-play"></i>
                     </span>
@@ -114,28 +116,12 @@
                 <a href="#">SHOP NOW</a>
             </div>
         </div>
-        <div class="card">
-            <img src="../../../assets/Img/Latest Blog/img-1.jpg" alt="">
+        <div class="card" *ngFor="let card of specialProducts">
+            <img src="{{card.img}}" alt="">
             <div class="card-text">
-                <span>Pistol</span>
-                <h3>Desert Eagle</h3>
-                <div class="rate">$200.00</div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../../../assets/Img/Latest Blog/img-2.jpg" alt="">
-            <div class="card-text">
-                <span>Rifle</span>
-                <h3>Assault Rifle M16</h3>
-                <div class="rate">$500.00</div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../../../assets/Img/Latest Blog/img-3.jpg" alt="">
-            <div class="card-text">
-                <span>Auto-Rifle</span>
-                <h3>Kalashnikov (AK-47)</h3>
-                <div class="rate">$2000.00</div>
+                <span>{{card.type}}</span>
+                <h3>{{card.name}}</h3>
+                <div class="rate">${{card.rate}}.00</div>
             </div>
         </div>
     </div>
@@ -155,8 +141,6 @@
                     <div class="name">MR. Nobody</div>
                     <div class="post">Sniper</div>
                 </div>
-                <!-- <img src="../../../assets/Img/Latest Blog/img-1.jpg" class="comment-img"> -->
-            </div>
         </div>
     </div>
 </div>

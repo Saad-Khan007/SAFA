@@ -6,6 +6,60 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  categories = [
+    {
+      img: '../../../assets/Img/Category/img-1.jpg',
+      type: 'Pistol',
+      name: ['Derringers', 'Pocket Pistols', 'Double-Action Pistols', 'Semi-automatic Pistols']
+    },
+    {
+      img: '../../../assets/Img/Category/img-2.jpg',
+      type: 'Generade',
+      name: ['Flash Grenade', 'Smoke Grenade', 'Concussion Grenade', 'Fragmentation Grenade']
+    },
+    {
+      img: '../../../assets/Img/Category/img-3.jpg',
+      type: 'Sniper',
+      name: ['Sako TRG', 'Dragunov SVD', 'Barrett M82/M107', 'Mosin-Nagant M91/30']
+    },
+    {
+      img: '../../../assets/Img/Category/img-4.jpg',
+      type: 'Rifle',
+      name: ['Assault Rifle', 'Bolt-Action Rifle', 'Lever-Action Rifle', 'Semi-Automatic Rifle']
+    },
+    {
+      img: '../../../assets/Img/Category/img-5.jpg',
+      type: 'Knife',
+      name: ['Pocket Knife', 'Tactical Knife', 'Survival Knife', 'Hunting Knife']
+    },
+    {
+      img: '../../../assets/Img/Category/img-6.jpg',
+      type: 'Armor',
+      name: ['Shield', 'Helmet', 'Plate Armor', 'Brigandine Armor']
+    },
+  ]
+
+  specialProducts = [
+    {
+      img: '../../../assets/Img/Latest Blog/img-1.jpg',
+      type: 'Pistol',
+      name: 'Desert Eagle',
+      rate: 200
+    },
+    {
+      img: '../../../assets/Img/Latest Blog/img-2.jpg',
+      type: 'Rifle',
+      name: 'Assault Rifle M-16',
+      rate: 500
+    },
+    {
+      img: '../../../assets/Img/Latest Blog/img-3.jpg',
+      type: 'Auto-Rifle',
+      name: 'Kalashnikov (AK-47)',
+      rate: 2000
+    },
+  ]
+
   latestBlogCards = [
     {
       img: '../../../assets/Img/Latest Blog/img-1.jpg',
