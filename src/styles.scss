@@ -15,3 +15,12 @@
     --main_rgb_1:rgb(251, 176, 64);
     --main_rgb_2:rgb(249, 237, 50);
 }
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: black;
+    // background-color: var(--main);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main);
+}

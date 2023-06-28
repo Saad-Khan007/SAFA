@@ -8,6 +8,42 @@
         </div>
     </div>
 </div>
+<div class="popular-product-container">
+    <div class="header">
+        <h3>Popular Product</h3>
+        <div class="btn">
+            <i class="pi pi-angle-left" (click)="popArrowFunc('prev','popular')"></i>
+            <i class="pi pi-angle-right" (click)="popArrowFunc('next','popular')"></i>
+        </div>
+    </div>
+    <div class="header-2">
+        <div class="buttons">
+            <span [class.active]="popular_Id === 0" (click)="popFunc(0)">Featured</span>
+            <span [class.active]="popular_Id === 1" (click)="popFunc(1)">Bestseller</span>
+            <span [class.active]="popular_Id === 2" (click)="popFunc(2)">Latest</span>
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="card" *ngFor="let card of popularFeatured[popular_Id]">
+            <img src="{{card.img}}">
+            <div class="card-text">
+                <div class="type">{{card.type}}</div>
+                <div class="name">{{card.name}}</div>
+                <div class="rate">${{card.rate}}.00</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="discover-container container">
+    <div class="black-overlay">
+        <div class="home-text">
+            <h2 style="color: var(--main);text-transform: uppercase;">What Arsenal</h2>
+            <h1>Sales Up To 50% Off</h1>
+            <a href="#">Discover Now</a>
+        </div>
+    </div>
+</div>
 <div class="daily-deal-container">
     <div class="header">
         <h3>Daily Deals</h3>
@@ -28,16 +64,16 @@
             <div class="text-container">
                 <h6>Knife</h6>
                 <h1>Hunting Knife</h1>
-                <span>$122.00</span>
+                <span>$52.00</span>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, debitis.</p>
                 <div class="icons">
                     <i class="pi pi-cart-plus"></i>
                     <i class="pi pi-heart"></i>
                 </div>
                 <div class="time">
-                    <span>758 D  :</span>
-                    <span> 8 H  :</span>
-                    <span> 21 M  :</span>
+                    <span>758 D :</span>
+                    <span> 8 H :</span>
+                    <span> 21 M :</span>
                     <span class="sec"> 30 S</span>
                 </div>
                 <div class="stock">
@@ -64,9 +100,9 @@
                     <i class="pi pi-heart"></i>
                 </div>
                 <div class="time">
-                    <span>758 D  :</span>
-                    <span> 8 H  :</span>
-                    <span> 21 M  :</span>
+                    <span>758 D :</span>
+                    <span> 8 H :</span>
+                    <span> 21 M :</span>
                     <span class="sec"> 30 S</span>
                 </div>
                 <div class="stock">
@@ -81,10 +117,6 @@
     <div class="black-overlay">
         <div class="header">
             <h3>Our Category</h3>
-            <div class="btn">
-                <i class="pi pi-angle-left"></i>
-                <i class="pi pi-angle-right"></i>
-            </div>
         </div>
         <div class="card-container">
             <div class="card" *ngFor="let card of categories">
@@ -111,8 +143,8 @@
     <div class="card-container">
         <div class="ad-card">
             <div class="black-overlay">
-                <h3>Performance</h3>
-                <h1>Original Parts And Accessories For Toyato</h1>
+                <h3>Armory Arsenal</h3>
+                <h1>Empower your arsenal with Armory.</h1>
                 <a href="#">SHOP NOW</a>
             </div>
         </div>
@@ -130,17 +162,18 @@
 <div class="testimonial-container">
     <div class="black-overlay">
         <div class="testimonial-text">
-            <i class="pi pi-angle-left left"></i>
-            <i class="pi pi-angle-right right"></i>
+            <i class="pi pi-angle-left left" (click)="popArrowFunc('prev','profile')"></i>
+            <i class="pi pi-angle-right right" (click)="popArrowFunc('prev','profile')"></i>
             <h3>Client <span>Testimonials</span></h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sint laudantium ab explicabo cupiditate
                 temporibus amet accusamus sequi harum quidem.</p>
             <div class="profile">
-                <img src="../../../assets/Img/Latest Blog/img-1.jpg" class="profile-img">
+                <img src="{{profiles[profile_Id].img}}" class="profile-img">
                 <div class="profile-text">
-                    <div class="name">MR. Nobody</div>
-                    <div class="post">Sniper</div>
+                    <div class="name">{{profiles[profile_Id].name}}</div>
+                    <div class="post">{{profiles[profile_Id].post}}</div>
                 </div>
+            </div>
         </div>
     </div>
 </div>
@@ -148,10 +181,6 @@
 <div class="latest-blog-container">
     <div class="header">
         <h3>Latest Blog</h3>
-        <div class="btn">
-            <i class="pi pi-angle-left"></i>
-            <i class="pi pi-angle-right"></i>
-        </div>
     </div>
     <div class="card-container">
         <div class="card" *ngFor="let card of latestBlogCards">

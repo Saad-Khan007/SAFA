@@ -40,8 +40,8 @@ export class FooterComponent {
     {
       title: 'CONTACT US',
       items: [
-        'Address: Unknown',
-        'Lahore',
+        'Address: Dara Adamkhel',
+        'in Pakistan',
         'Call: 123-456-789',
         'Email: safa@weapon.com'
       ]

@@ -6,6 +6,224 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  popular_Id: number = 0;
+  profile_Id = 0;
+  popFunc(number: number): void {
+    this.popular_Id = number;
+  }
+  popArrowFunc(value: string, value2: string): void {
+    if (value2 === 'popular') {
+      if (value === 'prev') {
+        if (this.popular_Id === 0) {
+          this.popular_Id = 2;
+        } else {
+          this.popular_Id--;
+        }
+      } else if (value === 'next') {
+        if (this.popular_Id === 2) {
+          this.popular_Id = 0;
+        } else {
+          this.popular_Id++;
+        }
+      }
+    } else if (value2 === 'profile') {
+      if (value === 'prev') {
+        if (this.profile_Id === 0) {
+          this.profile_Id = 2;
+        } else {
+          this.profile_Id--;
+        }
+      } else if (value === 'next') {
+        if (this.profile_Id === 2) {
+          this.profile_Id = 0;
+        } else {
+          this.profile_Id++;
+        }
+      }
+    }
+  }
+  profiles = [
+    {
+      post: 'Sniper',
+      name: 'American Sniper.',
+      img: '../../../assets/Img/Profile/img-1.jpg'
+    },
+    {
+      post: 'Swordsman',
+      name: 'MR. Unknown',
+      img: '../../../assets/Img/Profile/img-2.jpg'
+    },
+    {
+      post: 'Heavy Weapons Operator',
+      name: 'MR. Nobody',
+      img: '../../../assets/Img/Profile/img-3.jpg'
+    },
+  ]
+  popularFeatured = [
+    [
+      {
+        type: 'Pistol',
+        img: '../../../assets/Img/Category/img-1-1.jpg',
+        name: 'Derringers',
+        rate: 100,
+      },
+      {
+        type: 'Pistol',
+        img: '../../../assets/Img/Category/img-1-4.jpg',
+        name: 'Semi-automatic Pistols',
+        rate: 200,
+      },
+      {
+        type: 'Grenade',
+        img: '../../../assets/Img/Category/img-2-1.jpg',
+        name: 'Flash Grenade',
+        rate: 10,
+      },
+      {
+        type: 'Grenade',
+        img: '../../../assets/Img/Category/img-2-2.jpg',
+        name: 'Smoke Grenade',
+        rate: 15,
+      },
+      {
+        type: 'Sniper',
+        img: '../../../assets/Img/Category/img-3-1.jpg',
+        name: 'Sako TRG',
+        rate: 1000,
+      },
+      {
+        type: 'Sniper',
+        img: '../../../assets/Img/Category/img-3-3.jpg',
+        name: 'Barrett M82/M107',
+        rate: 1700,
+      },
+      {
+        type: 'Rifle',
+        img: '../../../assets/Img/Category/img-4-3.jpg',
+        name: 'Lever-Action Rifle',
+        rate: 1370,
+      },
+      {
+        type: 'Rifle',
+        img: '../../../assets/Img/Category/img-4-4.jpg',
+        name: 'Semi-Automatic Rifle',
+        rate: 3120,
+      },
+      {
+        type: 'Knife',
+        img: '../../../assets/Img/Category/img-5-1.jpg',
+        name: 'Tactical Knife',
+        rate: 60,
+      },
+      {
+        type: 'Dagger',
+        img: '../../../assets/Img/Category/img-5-3.jpg',
+        name: 'Khanjar',
+        rate: 230,
+      },
+    ],
+    [
+      {
+        type: 'Pistol',
+        img: '../../../assets/Img/Category/img-1-1.jpg',
+        name: 'Derringers',
+        rate: 100,
+      },
+      {
+        type: 'Pistol',
+        img: '../../../assets/Img/Category/img-1-2.jpg',
+        name: 'Pocket Pistols',
+        rate: 150,
+      },
+      {
+        type: 'Pistol',
+        img: '../../../assets/Img/Category/img-1-3.jpg',
+        name: 'Double-Action Pistols',
+        rate: 170,
+      },
+      {
+        type: 'Pistol',
+        img: '../../../assets/Img/Category/img-1-4.jpg',
+        name: 'Semi-automatic Pistols',
+        rate: 200,
+      },
+      {
+        type: 'Grenade',
+        img: '../../../assets/Img/Category/img-2-1.jpg',
+        name: 'Flash Grenade',
+        rate: 10,
+      },
+      {
+        type: 'Grenade',
+        img: '../../../assets/Img/Category/img-2-2.jpg',
+        name: 'Smoke Grenade',
+        rate: 15,
+      },
+      {
+        type: 'Grenade',
+        img: '../../../assets/Img/Category/img-2-3.jpg',
+        name: 'Concussion Grenade',
+        rate: 17,
+      },
+      {
+        type: 'Grenade',
+        img: '../../../assets/Img/Category/img-2-4.jpg',
+        name: 'Fragmentation Grenade',
+        rate: 20,
+      }
+    ],
+    [
+      {
+        type: 'Sniper',
+        img: '../../../assets/Img/Category/img-3-1.jpg',
+        name: 'Sako TRG',
+        rate: 1000,
+      },
+      {
+        type: 'Sniper',
+        img: '../../../assets/Img/Category/img-3-2.jpg',
+        name: 'Dragunov SVD',
+        rate: 1500,
+      },
+      {
+        type: 'Sniper',
+        img: '../../../assets/Img/Category/img-3-3.jpg',
+        name: 'Barrett M82/M107',
+        rate: 1700,
+      },
+      {
+        type: 'Sniper',
+        img: '../../../assets/Img/Category/img-3-4.jpg',
+        name: 'Mosin-Nagant M91/30',
+        rate: 2000,
+      },
+      {
+        type: 'Rifle',
+        img: '../../../assets/Img/Category/img-4-1-1.jpg',
+        name: 'Assault Rifle',
+        rate: 900,
+      },
+      {
+        type: 'Rifle',
+        img: '../../../assets/Img/Category/img-4-2-2.jpg',
+        name: 'Bolt-Action Rifle',
+        rate: 1050,
+      },
+      {
+        type: 'Rifle',
+        img: '../../../assets/Img/Category/img-4-3.jpg',
+        name: 'Lever-Action Rifle',
+        rate: 1370,
+      },
+      {
+        type: 'Rifle',
+        img: '../../../assets/Img/Category/img-4-4.jpg',
+        name: 'Semi-Automatic Rifle',
+        rate: 3120,
+      }
+    ],
+
+  ]
   categories = [
     {
       img: '../../../assets/Img/Category/img-1.jpg',
@@ -14,7 +232,7 @@ export class HomeComponent {
     },
     {
       img: '../../../assets/Img/Category/img-2.jpg',
-      type: 'Generade',
+      type: 'Grenade',
       name: ['Flash Grenade', 'Smoke Grenade', 'Concussion Grenade', 'Fragmentation Grenade']
     },
     {
