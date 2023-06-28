@@ -143,10 +143,35 @@ header {
                     padding: 15px;
                     font-family: 'Open Sans', sans-serif;
                     cursor: pointer;
+                    position: relative;
                     transition: all .2s ease-in-out;
 
                     &:hover {
-                        color: var(--white);
+                        color: white;
+
+                        &::after {
+                            width: 50%;
+                        }
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 10px;
+                        left: 16px;
+                        height: 3px;
+                        width: 0%;
+                        background-color: white;
+                        transition: width 0.3s ease;
+                    }
+
+                    &.active {
+                        color: white;
+
+                        &::after {
+                            width: 25%;
+                        }
+
                     }
                 }
             }

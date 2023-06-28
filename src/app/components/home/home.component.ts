@@ -8,40 +8,113 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   popular_Id: number = 0;
   profile_Id = 0;
-  popFunc(number: number): void {
-    this.popular_Id = number;
-  }
-  popArrowFunc(value: string, value2: string): void {
-    if (value2 === 'popular') {
-      if (value === 'prev') {
-        if (this.popular_Id === 0) {
-          this.popular_Id = 2;
-        } else {
-          this.popular_Id--;
-        }
-      } else if (value === 'next') {
-        if (this.popular_Id === 2) {
-          this.popular_Id = 0;
-        } else {
-          this.popular_Id++;
-        }
-      }
-    } else if (value2 === 'profile') {
-      if (value === 'prev') {
-        if (this.profile_Id === 0) {
-          this.profile_Id = 2;
-        } else {
-          this.profile_Id--;
-        }
-      } else if (value === 'next') {
-        if (this.profile_Id === 2) {
-          this.profile_Id = 0;
-        } else {
-          this.profile_Id++;
-        }
-      }
-    }
-  }
+  dailyDealId = 1;
+  dailyDeals = [
+    [
+      {
+        img1: '../../../assets/Img/Category/img-5.jpg',
+        img2: '../../../assets/Img/Category/img-5-1.jpg',
+        img3: '../../../assets/Img/Category/img-5-2.jpg',
+        type: 'Knife',
+        name: 'Hunting Knife',
+        rate: 52,
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, debitis.',
+        time: {
+          d: 24,
+          h: 20,
+          m: 10,
+          s: 30
+        },
+        stock: 92
+      },
+      {
+        img1: '../../../assets/Img/Category/img-4.jpg',
+        img2: '../../../assets/Img/Category/img-4-1.jpg',
+        img3: '../../../assets/Img/Category/img-4-2.jpg',
+        type: 'Rifle',
+        name: 'Assault Rifle M-16',
+        rate: '500',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, debitis.',
+        time: {
+          d: 40,
+          h: 13,
+          m: 10,
+          s: 40
+        },
+        stock: 12
+      },
+    ],
+    [
+      {
+        img1: '../../../assets/Img/Category/img-1.jpg',
+        img2: '../../../assets/Img/Category/img-1-1.jpg',
+        img3: '../../../assets/Img/Category/img-1-4.jpg',
+        type: 'Pistol',
+        name: 'Derringers',
+        rate: 100,
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, debitis.',
+        time: {
+          d: 1,
+          h: 2,
+          m: 10,
+          s: 20
+        },
+        stock: 2
+      },
+      {
+        img1: '../../../assets/Img/Category/img-3.jpg',
+        img2: '../../../assets/Img/Category/img-3-1.jpg',
+        img3: '../../../assets/Img/Category/img-3-2.jpg',
+        type: 'Sniper',
+        name: 'Sako TRG',
+        rate: '1000',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, debitis.',
+        time: {
+          d: 20,
+          h: 23,
+          m: 50,
+          s: 10
+        },
+        stock: 112
+      },
+    ],
+    [
+      {
+        img1: '../../../assets/Img/Category/img-2.jpg',
+        img2: '../../../assets/Img/Category/img-2-1.jpg',
+        img3: '../../../assets/Img/Category/img-2-2.jpg',
+        type: 'Grenade',
+        name: 'Flash Grenade',
+        rate: 15,
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, debitis.',
+        time: {
+          d: 10,
+          h: 12,
+          m: 1,
+          s: 2
+        },
+        stock: 12
+      },
+      {
+        img1: '../../../assets/Img/Category/img-6.jpg',
+        img2: '../../../assets/Img/Category/img-6-1.jpg',
+        img3: '../../../assets/Img/Category/img-6-2.jpg',
+        type: 'Armor',
+        name: 'Sheild',
+        rate: '200',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, debitis.',
+        time: {
+          d: 0,
+          h: 3,
+          m: 5,
+          s: 50
+        },
+        stock: 1
+      },
+    ],
+  ];
+
+
   profiles = [
     {
       post: 'Sniper',
@@ -305,7 +378,7 @@ export class HomeComponent {
     },
   ]
 
-  delieveryRulesBoxes = [
+  deliveryRulesBoxes = [
     {
       img: '../../../assets/Img/Rules/1.png',
       title: 'Free Shiping.',
@@ -327,4 +400,57 @@ export class HomeComponent {
       desc: 'We Ensure 100% Secure Payment With Online Payment'
     },
   ]
+
+  // Functions starts from here
+
+
+  popFunc(number: number): void {
+    this.popular_Id = number;
+  }
+
+  popArrowFunc(value: string, value2: string): void {
+    if (value2 === 'popular') {
+      if (value === 'prev') {
+        if (this.popular_Id === 0) {
+          this.popular_Id = 2;
+        } else {
+          this.popular_Id--;
+        }
+      } else if (value === 'next') {
+        if (this.popular_Id === 2) {
+          this.popular_Id = 0;
+        } else {
+          this.popular_Id++;
+        }
+      }
+    } else if (value2 === 'profile') {
+      if (value === 'prev') {
+        if (this.profile_Id === 0) {
+          this.profile_Id = 2;
+        } else {
+          this.profile_Id--;
+        }
+      } else if (value === 'next') {
+        if (this.profile_Id === 2) {
+          this.profile_Id = 0;
+        } else {
+          this.profile_Id++;
+        }
+      }
+    } else if (value2 === 'dailyDeals') {
+      if (value === 'prev') {
+        if (this.dailyDealId === 0) {
+          this.dailyDealId = 2;
+        } else {
+          this.dailyDealId--;
+        }
+      } else if (value === 'next') {
+        if (this.dailyDealId === 2) {
+          this.dailyDealId = 0;
+        } else {
+          this.dailyDealId++;
+        }
+      }
+    }
+  }
 }

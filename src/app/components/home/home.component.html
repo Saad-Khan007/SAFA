@@ -1,10 +1,13 @@
+<a  href="#main" class="top_arrow">
+    <i class="pi pi-angle-double-up"></i>
+</a>
 <div class="container">
     <div class="black-overlay">
         <div class="home-text">
             <h2 style="color: var(--main);text-transform: uppercase;">Welcome to the SAFA</h2>
             <h1>Your Safety, Our Priority</h1>
             <h3>Excludes prohibited items and illegal transactions.</h3>
-            <a href="#">Shop Now</a>
+            <a href="#main">Shop Now</a>
         </div>
     </div>
 </div>
@@ -40,7 +43,7 @@
         <div class="home-text">
             <h2 style="color: var(--main);text-transform: uppercase;">What Arsenal</h2>
             <h1>Sales Up To 50% Off</h1>
-            <a href="#">Discover Now</a>
+            <a href="#main">Discover Now</a>
         </div>
     </div>
 </div>
@@ -48,66 +51,37 @@
     <div class="header">
         <h3>Daily Deals</h3>
         <div class="btn">
-            <i class="pi pi-angle-left"></i>
-            <i class="pi pi-angle-right"></i>
+            <i class="pi pi-angle-left" (click)="popArrowFunc('prev','dailyDeals')"></i>
+            <i class="pi pi-angle-right" (click)="popArrowFunc('next','dailyDeals')"></i>
         </div>
     </div>
     <div class="card-container">
-        <div class="card">
+        <div class="card" *ngFor="let card of dailyDeals[dailyDealId]">
             <div class="img-container">
-                <img class="main-img" src="../../../assets/Img/Category/img-5.jpg">
+                <img class="main-img" src="{{card.img1}}">
                 <div class="img-box">
-                    <img class="secondary-img" src="../../../assets/Img/Category/img-5-1.jpg">
-                    <img class="secondary-img" src="../../../assets/Img/Category/img-5-2.jpg">
+                    <img class="secondary-img" src="{{card.img2}}">
+                    <img class="secondary-img" src="{{card.img3}}">
                 </div>
             </div>
             <div class="text-container">
-                <h6>Knife</h6>
-                <h1>Hunting Knife</h1>
-                <span>$52.00</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, debitis.</p>
+                <h6>{{card.type}}</h6>
+                <h1>{{card.name}}</h1>
+                <span>${{card.rate}}.00</span>
+                <p>{{card.text}}</p>
                 <div class="icons">
                     <i class="pi pi-cart-plus"></i>
                     <i class="pi pi-heart"></i>
                 </div>
                 <div class="time">
-                    <span>758 D :</span>
-                    <span> 8 H :</span>
-                    <span> 21 M :</span>
-                    <span class="sec"> 30 S</span>
+                    <span>{{card.time.d}} D :</span>
+                    <span> {{card.time.h}} H :</span>
+                    <span> {{card.time.m}} M :</span>
+                    <span class="sec"> {{card.time.s}} S</span>
                 </div>
                 <div class="stock">
                     <span>Availability : </span>
-                    <h6>298 In Stocks</h6>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img-container">
-                <img class="main-img" src="../../../assets/Img/Category/img-4.jpg">
-                <div class="img-box">
-                    <img class="secondary-img" src="../../../assets/Img/Category/img-4-1.jpg">
-                    <img class="secondary-img" src="../../../assets/Img/Category/img-4-2.jpg">
-                </div>
-            </div>
-            <div class="text-container">
-                <h6>Rifle</h6>
-                <h1>Assault Rifle M-16</h1>
-                <span>$500.00</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, debitis.</p>
-                <div class="icons">
-                    <i class="pi pi-cart-plus"></i>
-                    <i class="pi pi-heart"></i>
-                </div>
-                <div class="time">
-                    <span>758 D :</span>
-                    <span> 8 H :</span>
-                    <span> 21 M :</span>
-                    <span class="sec"> 30 S</span>
-                </div>
-                <div class="stock">
-                    <span>Availability : </span>
-                    <h6>298 In Stocks</h6>
+                    <h6>{{card.stock}} In Stocks</h6>
                 </div>
             </div>
         </div>
@@ -145,7 +119,7 @@
             <div class="black-overlay">
                 <h3>Armory Arsenal</h3>
                 <h1>Empower your arsenal with Armory.</h1>
-                <a href="#">SHOP NOW</a>
+                <a href="#main">SHOP NOW</a>
             </div>
         </div>
         <div class="card" *ngFor="let card of specialProducts">
@@ -195,32 +169,11 @@
 </div>
 
 <div class="rules-container">
-    <div class="rules-box" *ngFor="let rule of delieveryRulesBoxes">
+    <div class="rules-box" *ngFor="let rule of deliveryRulesBoxes">
         <img src="{{rule.img}}">
         <div class="rules-text">
             <h3>{{rule.title}}</h3>
             <p>{{rule.desc}}</p>
         </div>
-    </div>
-</div>
-
-<div class="news-letter-container">
-    <div class="news-letter-text">
-        Our Latest Newsletter
-    </div>
-    <div class="news-letter-subscribe-bar">
-        <div class="search-container">
-            <input type="text" placeholder="Your email address">
-            <div class="search-icon">
-                Subscribe
-            </div>
-        </div>
-    </div>
-    <div class="news-letter-social-media">
-        <span>Follow us :</span>
-        <i class="pi pi-facebook"></i>
-        <i class="pi pi-twitter"></i>
-        <i class="pi pi-youtube"></i>
-        <i class="fa-brands fa-pinterest-p"></i>
     </div>
 </div>
