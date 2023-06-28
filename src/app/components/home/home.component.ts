@@ -46,17 +46,20 @@ export class HomeComponent {
     {
       post: 'Sniper',
       name: 'American Sniper.',
-      img: '../../../assets/Img/Profile/img-1.jpg'
+      img: '../../../assets/Img/Profile/img-1.jpg',
+      text: `I recently purchased a gun from SAFA and I couldn't be happier with my experience. The website was easy to navigate, the ordering process was smooth, and the gun arrived quickly and in perfect condition.`
     },
     {
       post: 'Swordsman',
       name: 'MR. Unknown',
-      img: '../../../assets/Img/Profile/img-2.jpg'
+      img: '../../../assets/Img/Profile/img-2.jpg',
+      text: 'I highly recommend SAFA for purchasing guns online. Their selection is extensive, and their prices are competitive. The website is user-friendly, and their shipping and delivery were prompt and hassle-free.'
     },
     {
       post: 'Heavy Weapons Operator',
       name: 'MR. Nobody',
-      img: '../../../assets/Img/Profile/img-3.jpg'
+      img: '../../../assets/Img/Profile/img-3.jpg',
+      text: `SAFA is my go-to online firearms retailer. They consistently provide excellent service, fast shipping, and competitive prices. I have purchased multiple guns from them, and I've never been disappointed.`
     },
   ]
   popularFeatured = [

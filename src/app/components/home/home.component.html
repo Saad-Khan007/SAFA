@@ -165,8 +165,7 @@
             <i class="pi pi-angle-left left" (click)="popArrowFunc('prev','profile')"></i>
             <i class="pi pi-angle-right right" (click)="popArrowFunc('prev','profile')"></i>
             <h3>Client <span>Testimonials</span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sint laudantium ab explicabo cupiditate
-                temporibus amet accusamus sequi harum quidem.</p>
+            <p>{{profiles[profile_Id].text}}</p>
             <div class="profile">
                 <img src="{{profiles[profile_Id].img}}" class="profile-img">
                 <div class="profile-text">
