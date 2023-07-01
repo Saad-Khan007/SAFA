@@ -1,6 +1,9 @@
 <header>
     <div class="container_1" id="main">
-
+        <p-sidebar [(visible)]="sidebarVisible">
+            <h3 routerLink="home">Home</h3>
+            <h3 routerLink="contact">Contact</h3>
+        </p-sidebar>
         <div class="box_1">
             <img src="../../../assets/Logo/SAFA_Main_Logo.png" alt="SAFA_Logo">
             <div class="search-container">
@@ -12,7 +15,26 @@
         </div>
 
         <div class="box_2">
-            <i class="pi pi-user"></i>
+
+            <div class="user">
+                <i class="pi pi-user" (click)="userDropdown = !userDropdown"></i>
+                <div class=" pi-user-drop-down" *ngIf="userDropdown == true" (click)="userDropdown = false">
+                    <div class="box" routerLink="login" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true">
+                        <i class="pi pi-user"></i>
+                        Profile
+                    </div>
+                    <div class="box" routerLink="login" *ngIf="IsUserSignedUp == false && IsUserLoggedIn == false">
+                        <i class="pi pi-user-edit"></i>
+                        Login
+                    </div>
+                    <div class="box" routerLink="signup" *ngIf="IsUserSignedUp == false && IsUserLoggedIn == false">
+                        <i class="pi pi-user-plus"></i>
+                        Register
+                    </div>
+                </div>
+            </div>
+
+            <i (click)="sidebarVisible = true" class="pi pi-bars"></i>
             <i class="pi pi-heart">
                 <div class="number">1</div>
             </i>
@@ -30,13 +52,8 @@
 
         <div class="box_1">
 
-            <div class="all-categories">
-                <i class="pi pi-bars"></i>
-                All Categories
-            </div>
-
             <div class="router-links-container">
-                <span routerLinkActive="active" routerLink="home">Home</span>
+                <span routerLinkActive="active" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true" routerLink="home">Home</span>
                 <span routerLinkActive="active" routerLink="contact">Contact</span>
             </div>
 

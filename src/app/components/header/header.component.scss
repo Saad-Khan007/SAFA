@@ -7,6 +7,17 @@ header {
         padding: 25px 0;
         display: flex;
 
+        p-sidebar {
+            h3 {
+                font-family: 'Open Sans', sans-serif;
+                margin-bottom: 20px;
+
+                &:hover {
+                    color: var(--main_rgb_1);
+                }
+            }
+        }
+
         .box_1 {
             width: 60%;
             display: flex;
@@ -63,6 +74,47 @@ header {
             align-items: center;
             gap: 10px;
 
+            .user {
+                position: relative;
+            }
+
+            .pi-user-drop-down {
+                position: absolute;
+                z-index: 10000;
+                font-family: 'Open Sans', sans-serif;
+                top: 110%;
+                left: 0;
+                background-color: #fff;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid var(--main_rgb_1);
+
+                .box {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 10px;
+                    font-size: 14px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    transition: all .3s ease-in-out !important;
+
+                    i {
+                        transition: none;
+                    }
+
+                    &:hover {
+                        background-color: #e7e7e7;
+                        color: var(--main_rgb_1);
+                    }
+                }
+            }
+
+            .pi-bars {
+                display: none;
+            }
+
             .pkrSpan {
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 font-size: 15px;
@@ -112,25 +164,6 @@ header {
 
         .box_1 {
             display: flex;
-
-            .all-categories {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                gap: 50px;
-                height: 50px;
-                color: white;
-                background-color: #253237;
-                padding: 15px;
-                font-size: 20px;
-                font-family: 'Open Sans', sans-serif;
-                cursor: pointer;
-                letter-spacing: 1px;
-
-                i {
-                    font-size: 22px;
-                }
-            }
 
             .router-links-container {
                 display: flex;
@@ -183,6 +216,7 @@ header {
             color: black;
             padding: 15px;
             font-family: 'Open Sans', sans-serif;
+
         }
     }
 }
@@ -207,6 +241,14 @@ header {
         .box_2 {
             .pi-heart {
                 display: none !important;
+            }
+
+            .pi-shopping-bag {
+                display: none !important;
+            }
+
+            .pi-bars {
+                display: inline-block !important;
             }
 
             .pkrSpan {

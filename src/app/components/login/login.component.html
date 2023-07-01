@@ -1,0 +1,25 @@
+<div class="contact-container">
+    <div class="header">
+        <h3>Login</h3>
+    </div>
+    <fieldset>
+        <legend>Form</legend>
+        <form [formGroup]="form" name="submit-to-google-sheet">
+            <input type="email" formControlName="Email" placeholder="Your E-mail..">
+            <div *ngIf="form.get('Email')?.touched && form.get('Email')?.errors?.['required']" class="error">
+                Please enter an email.</div>
+            <div *ngIf="form.get('Email')?.touched && form.get('Email')?.errors?.['email']" class="error">
+                Invalid email.</div>
+            <input type="password" formControlName="Password" placeholder="Your Password..">
+            <div *ngIf="form.get('Password')?.touched && form.get('Password')?.errors?.['required']" class="error">
+                Password
+                is required.</div>
+            <div *ngIf="form.get('Password')?.touched && form.get('Password')?.errors?.['pattern']" class="error">
+                Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase
+                letter, one digit, and one special character.</div>
+
+            <button type="submit" class="btn" [disabled]="form.invalid" (click)="submit()">Submit</button>
+        </form>
+        <p>Don't have an account? <a routerLink="/signup">Sign up</a></p>
+    </fieldset>
+</div>

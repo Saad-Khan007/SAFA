@@ -77,5 +77,16 @@
             }
 
         }
+
+        p {
+            font-size: 14px;
+            font-weight: 900;
+            text-align: center;
+
+            a {
+                color: var(--main);
+                text-decoration: none;
+            }
+        }
     }
 }
