@@ -6,7 +6,6 @@ import { AnimateModule } from 'primeng/animate';
 import { ButtonModule } from 'primeng/button';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { PanelMenuModule } from 'primeng/panelmenu';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +16,10 @@ import { ContactComponent } from './components/contact/contact.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfileComponent } from './components/profile/profile.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { UpdateProductListComponent } from './components/update-product-list/update-product-list.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,11 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     ContactComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    ProfileComponent,
+    AddProductComponent,
+    ProductListComponent,
+    UpdateProductListComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +43,7 @@ import { HttpClientModule } from '@angular/common/http';
     AnimateModule,
     ButtonModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

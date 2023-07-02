@@ -1,0 +1,29 @@
+<div class="product-list-container">
+    <div class="header">
+        <h3>Product List</h3>
+    </div>
+    <fieldset>
+        <legend>List</legend>
+        <table>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+            <tr *ngFor="let tr of lists">
+                <td><img src="{{tr.img}}"></td>
+                <td>{{tr.name}}</td>
+                <td>{{tr.rate}}.00$</td>
+                <td>{{tr.type}}</td>
+                <td>{{tr.desc}}</td>
+                <td class="icon">
+                    <i class="pi pi-trash" (click)="deleteProduct(tr.id)" title="Delete"></i>
+                    <i class="fa-regular fa-pen-to-square" (click)="updateProduct(tr.id)" title="Update"></i>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</div>

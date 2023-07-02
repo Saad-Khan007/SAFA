@@ -1,4 +1,4 @@
-.contact-container {
+.add-product-container {
     width: 90%;
     margin: 30px 5%;
     font-family: 'Open Sans', sans-serif;
@@ -27,7 +27,7 @@
             flex-direction: column;
 
             input,
-            textarea {
+            textarea,select {
                 width: 100%;
                 border: 0;
                 outline: none;
@@ -39,6 +39,10 @@
                 font-size: 18px;
                 border-radius: 6px;
                 resize: none;
+            }
+            select option{
+                padding: 10px;
+
             }
 
             .error {

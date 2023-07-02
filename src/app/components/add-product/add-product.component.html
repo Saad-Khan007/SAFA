@@ -1,0 +1,32 @@
+<div class="add-product-container">
+    <div class="header">
+        <h3>Add Product</h3>
+    </div>
+    <fieldset>
+        <legend>Product Details</legend>
+        <span id="msg" *ngIf="msgSent">Product is added successfully.</span>
+        <form [formGroup]="form" name="submit-to-google-sheet">
+            <input type="text" formControlName="Name" placeholder="Enter Product Name">
+            <div *ngIf="form.get('Name')?.touched && form.get('Name')?.errors?.['required']" class="error">
+                Name is required.</div>
+            <input type="number" formControlName="Price" placeholder="Enter Product Price">
+            <div *ngIf="form.get('Price')?.touched && form.get('Price')?.errors?.['required']" class="error">
+                Price is required.</div>
+            <input type="text" formControlName="Category" placeholder="Enter Product Category">
+            <div *ngIf="form.get('Category')?.touched && form.get('Category')?.errors?.['required']" class="error">
+                Category is required.</div>
+            <input type="text" formControlName="Description" placeholder="Enter Product Description">
+            <div *ngIf="form.get('Description')?.touched && form.get('Description')?.errors?.['required']"
+                class="error">
+                Description is required.</div>
+            <select formControlName="Image">
+                <option value="">Enter Product Image</option>
+                <option [value]="option" *ngFor="let option of options">{{option}}</option>
+            </select>
+            <div *ngIf="form.get('Image')?.touched && form.get('Image')?.errors?.['required']" class="error">
+                Image is required.</div>
+            <img [src]="form.get('Image')?.value" *ngIf="form.get('Image')?.value" style="align-self: center;height: 200px;width: 300px;object-fit: contain;">
+            <button type="submit" class="btn" [disabled]="form.invalid" (click)="submit()">Submit</button>
+        </form>
+    </fieldset>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductServiceService } from 'src/app/services/product-service.service';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  constructor(private productService: ProductServiceService) { }
+  ngOnInit(): void {
+    this.productService.productList().subscribe(product => {
+      console.log(product);
+      const transformedProducts = product.map(product => {
+        return {
+          type: String(product.type),
+          img: String(product.img),
+          name: String(product.name),
+          rate: product.rate,
+        };
+      });
+      this.popularFeatured.push(transformedProducts);
+    });
+  }
   popular_Id: number = 0;
   profile_Id = 0;
   dailyDealId = 1;
@@ -412,12 +428,12 @@ export class HomeComponent {
     if (value2 === 'popular') {
       if (value === 'prev') {
         if (this.popular_Id === 0) {
-          this.popular_Id = 2;
+          this.popular_Id = 3;
         } else {
           this.popular_Id--;
         }
       } else if (value === 'next') {
-        if (this.popular_Id === 2) {
+        if (this.popular_Id === 3) {
           this.popular_Id = 0;
         } else {
           this.popular_Id++;

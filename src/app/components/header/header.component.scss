@@ -83,10 +83,11 @@ header {
                 z-index: 10000;
                 font-family: 'Open Sans', sans-serif;
                 top: 110%;
-                left: 0;
+                right: 100%;
                 background-color: #fff;
                 padding: 10px;
                 border-radius: 10px;
+                width: max-content;
                 border: 1px solid var(--main_rgb_1);
 
                 .box {
@@ -97,6 +98,7 @@ header {
                     font-size: 14px;
                     padding: 10px;
                     border-radius: 10px;
+                    width: 100%;
                     cursor: pointer;
                     transition: all .3s ease-in-out !important;
 

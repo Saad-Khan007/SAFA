@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 @import "primeng/resources/themes/lara-light-blue/theme.css";
-// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
@@ -199,7 +198,23 @@ body {
                 }
 
                 p {
-                    width: 90%;
+                    width: 90% !important;
+                    font-size: 14px !important;
+                }
+
+                .profile {
+                    .profile-img {
+                        height: 60px !important;
+                        width: 60px !important;
+                    }
+                    .profile-text{
+                        .name{
+                            font-size: 16px !important;
+                        }
+                        .post{
+                            font-size: 14px !important;
+                        }
+                    }
                 }
             }
         }

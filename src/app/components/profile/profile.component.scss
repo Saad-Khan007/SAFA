@@ -1,0 +1,48 @@
+.profile-container {
+    width: 90%;
+    margin: 30px 5%;
+    font-family: 'Open Sans', sans-serif;
+
+    fieldset {
+        border-radius: 5px;
+        margin: 20px 0;
+        padding: 20px;
+
+        legend {
+            margin-left: 0px;
+            font-size: 20px;
+            font-weight: 900;
+            color: var(--main);
+        }
+
+        .profile-box {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+
+            .main-box {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .box {
+                    h6{
+                        font-size: 18px;
+                        font-weight:900;
+                        color: var(--main);
+                        text-transform: uppercase;
+                        display: inline-block;
+                    }
+                    span{
+                        font-size: 16px;
+                        margin-left: 20px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}

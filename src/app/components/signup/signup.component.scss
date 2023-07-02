@@ -28,10 +28,6 @@
 
             input,
             textarea {
-                // border: 2px solid #e2e2e2;
-                // border-radius: 5px;
-                // width: 50%;
-                // resize: vertical;
                 width: 100%;
                 border: 0;
                 outline: none;
@@ -63,7 +59,7 @@
                 background: transparent;
                 color: var(--font);
                 border-radius: 10px;
-                font-size: 1vw;
+                font-size: 16px;
                 letter-spacing: 1px;
                 transition: all .3s ease-in-out;
                 text-decoration: none;
@@ -73,7 +69,7 @@
             .btn:hover {
                 background: var(--main);
                 color: white;
-                box-shadow: 0 0 1vw var(--main);
+                box-shadow: 0 0 10px var(--main);
             }
 
         }

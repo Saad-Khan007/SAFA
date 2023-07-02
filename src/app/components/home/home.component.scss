@@ -69,15 +69,16 @@
 .discover-container {
     width: 90%;
     margin: 10px 5%;
-    height: 200px;
+    height: auto;
     border-radius: 10px;
     overflow: hidden;
-
+    
     .black-overlay {
-        height: 200px !important;
+        height: auto !important;
+        padding:20px;
 
         .home-text {
-            height: 200px;
+            height: auto;
         }
     }
 }
@@ -147,9 +148,6 @@
 
     .card-container {
         display: grid;
-        // justify-content: flex-start;
-        // align-items: center;
-        // flex-wrap: wrap;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         grid-gap: 30px;
         padding-top: 20px;
@@ -619,6 +617,7 @@
         font-size: 18px;
         line-height: 30px;
         cursor: pointer;
+        z-index: 10000;
 
         &:hover {
             background-color: var(--main);

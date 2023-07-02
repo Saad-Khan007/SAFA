@@ -1,0 +1,66 @@
+.product-list-container {
+    width: 90%;
+    margin: 30px 5%;
+    font-family: 'Open Sans', sans-serif;
+
+    fieldset {
+        border-radius: 5px;
+        margin: 20px 0;
+        padding: 20px;
+
+        legend {
+            margin-left: 0px;
+            font-size: 20px;
+            font-weight: 900;
+            color: var(--main);
+        }
+
+
+        td,
+        tr,
+        th {
+            border-collapse: collapse;
+            border: 1px solid var(--main);
+            padding: 10px;
+            text-align: center;
+        }
+
+        td,
+        th {
+            width: 10%;
+
+            &:nth-child(5) {
+                width: 50%;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid var(--main);
+        }
+        i {
+            font-size: 20px;
+            font-weight: 900;
+            color: var(--main);
+            margin-right: 5px;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                color: red;
+            }
+            &:nth-child(2){
+                &:hover{
+                    color: blue;
+                }
+            }
+        }
+
+        table tr td img {
+            height: 50px;
+            width: 50px;
+            object-fit: contain;
+        }
+    }
+}
