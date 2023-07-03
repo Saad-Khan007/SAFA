@@ -1,5 +1,8 @@
+import { query } from '@angular/animations';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Product } from 'src/app/data.type';
+import { ProductServiceService } from 'src/app/services/product-service.service';
 import { UserServiceService } from 'src/app/services/user-service.service';
 
 @Component({
@@ -12,14 +15,32 @@ export class HeaderComponent {
   userDropdown: boolean = false;
   IsUserSignedUp: boolean = false;
   IsUserLoggedIn: boolean = false;
+  searchList: undefined | Product[];
   // IsLogInSignUp: boolean = false;
-  constructor(private userService: UserServiceService, private router: Router) {
+  constructor(private userService: UserServiceService, private router: Router, private productService: ProductServiceService) {
     this.userService.IsUserSignedUp.subscribe((user: boolean) => {
       this.IsUserSignedUp = user;
     })
     this.userService.IsUserLoggedIn.subscribe((user: boolean) => {
       this.IsUserLoggedIn = user;
     })
+  }
+  hideSearch() {
+    this.searchList = undefined;
+  }
+  submitSearch(value: string){
+    this.router.navigate([`search/${value}`])
+  }
+  searchProduct(event: KeyboardEvent) {
+    if (event) {
+      const element = event.target as HTMLInputElement
+      this.productService.searchList(element.value).subscribe((data) => {
+        if (data.length >= 5) {
+          data.length = 5
+        }
+        this.searchList = data;
+      })
+    }
   }
   // ngOnInit(): void {
   //   this.router.events.subscribe((event: any) => {
@@ -34,7 +55,7 @@ export class HeaderComponent {
   //     }
   //   })
   // }
-  logOut(){
+  logOut() {
     this.userService.logOut();
   }
 }

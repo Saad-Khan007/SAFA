@@ -19,10 +19,16 @@ export class ProductServiceService {
   deleteProduct(id: number) {
     return this.http.delete(`http://localhost:3000/product/${id}`)
   }
-  getProduct(id: string) {
+  getProduct(id: number) {
     return this.http.get<Product>(`http://localhost:3000/product/${id}`)
+  }
+  getPopularProduct(id: number) {
+    return this.http.get<Product>(`http://localhost:3000/popularFeatured/${id}`)
   }
   updateProduct(product: Product) {
     return this.http.put<Product>(`http://localhost:3000/product/${product.id}`, product)
+  }
+  searchList(query: string) {
+    return this.http.get<Product[]>(`http://localhost:3000/popularFeatured?q=${query}`)
   }
 }

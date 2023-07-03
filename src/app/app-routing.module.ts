@@ -9,16 +9,18 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { UpdateProductListComponent } from './components/update-product-list/update-product-list.component';
+import { SearchListComponent } from './components/search-list/search-list.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 const routes: Routes = [
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    canActivate: [SignupGuardGuard]
   },
   {
     path: 'home',
     component: HomeComponent,
-    canActivate: [SignupGuardGuard]
   },
   {
     path: 'contact',
@@ -27,6 +29,7 @@ const routes: Routes = [
   {
     path: 'signup',
     component: SignupComponent,
+    canActivate: [SignupGuardGuard]
   },
   {
     path: 'profile',
@@ -45,12 +48,20 @@ const routes: Routes = [
     component: UpdateProductListComponent,
   },
   {
+    path: 'search/:query',
+    component: SearchListComponent,
+  },
+  {
+    path: 'product-detail/:productId',
+    component: ProductDetailsComponent,
+  },
+  {
     path: '',
-    component: LoginComponent
+    component: HomeComponent
   },
   {
     path: '**',
-    component: LoginComponent
+    component: HomeComponent
   },
 ];
 

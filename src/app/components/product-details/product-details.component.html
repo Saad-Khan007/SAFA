@@ -1,0 +1,26 @@
+<div class="product-container">
+    <div class="product-image">
+        <img src="{{product?.img}}">
+    </div>
+    <div class="product-text">
+        <h2>{{product?.name}}</h2>
+        <div class="type">Type: {{product?.type}}</div>
+        <div class="price">Price: ${{product?.rate}}.00</div>
+        <div class="desc">{{product?.description || product?.desc}}</div>
+        <div class="quantity">
+            <div class="btn1" (click)="quantityFunc('sub')">-</div>
+            <input type="number" value="{{quantity}}" readonly>
+            <div class="btn1" (click)="quantityFunc('add')">+</div>
+        </div>
+        <div class="btn-container">
+            <div class="btn">
+                <i class="pi pi-cart-plus"></i>
+                Add to Cart
+            </div>
+            <div class="btn">
+                <i class="pi pi-shopping-cart"></i>
+                Buy Now
+            </div>
+        </div>
+    </div>
+</div>

@@ -20,6 +20,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { UpdateProductListComponent } from './components/update-product-list/update-product-list.component';
+import { SearchListComponent } from './components/search-list/search-list.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { UpdateProductListComponent } from './components/update-product-list/upd
     ProfileComponent,
     AddProductComponent,
     ProductListComponent,
-    UpdateProductListComponent
+    UpdateProductListComponent,
+    SearchListComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

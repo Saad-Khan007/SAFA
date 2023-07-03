@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Login, SignUp, UserInfo } from '../data.type';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -17,10 +18,13 @@ export class UserServiceService {
   IsLoginError = new BehaviorSubject<boolean>(false);
   userInfo: UserInfo | null = null;
   profileData(data: UserInfo) {
-    this.http.get(`http://localhost:3000/user?Email=${data.Email}&Password=${data.Password}`, { observe: 'response' })
-      .subscribe((result: any) => {
-        this.userInfo = result.body[0];
-      })
+    return this.http.get<UserInfo>(`http://localhost:3000/user?Email=${data.Email}&Name=${data.Name}`, { observe: 'response' })
+      .pipe(
+        map((result: any) => {
+          this.userInfo = result.body[0];
+          return this.userInfo;
+        })
+      );
   }
   signUpUser(data: SignUp) {
     this.http.post('http://localhost:3000/user', data, { observe: 'response' })
@@ -31,7 +35,6 @@ export class UserServiceService {
             name: result.body.Name,
             id: result.body.id,
           };
-          this.profileData(result.body)
           localStorage.setItem('user', JSON.stringify(localData));
           this.IsUserSignedUp.next(true);
           this.router.navigate(['home']);
@@ -53,7 +56,6 @@ export class UserServiceService {
           };
           localStorage.setItem('user', JSON.stringify(localData));
           this.IsUserLoggedIn.next(true);
-          this.profileData(result.body[0])
           this.router.navigate(['home']);
         } else {
           console.log("Error");

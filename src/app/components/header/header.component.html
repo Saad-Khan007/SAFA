@@ -1,24 +1,28 @@
 <header>
     <div class="container_1" id="main">
         <p-sidebar [(visible)]="sidebarVisible">
-            <h3 routerLink="home" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true">Home</h3>
-            <h3 routerLink="contact">Contact</h3>
+            <h3 routerLink="home" (click)="sidebarVisible = false"
+                *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true">Home</h3>
+            <h3 routerLink="contact" (click)="sidebarVisible = false">Contact</h3>
         </p-sidebar>
         <div class="box_1">
             <img routerLink="home" style="cursor: pointer;" src="../../../assets/Logo/SAFA_Main_Logo.png"
                 alt="SAFA_Logo">
             <div class="search-container" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true">
-                <input type="text" placeholder="Search">
-                <div class="search-icon">
+                <input type="text" #search (keyup)="searchProduct($event)" (blur)="hideSearch()" placeholder="Search">
+                <div class="search-icon" (click)="submitSearch(search.value)">
                     <i class="pi pi-search"></i>
                 </div>
+                <ul class="search-result" *ngIf="searchList">
+                    <li *ngFor="let item of searchList">{{ item.name }}</li>
+                </ul>
             </div>
         </div>
 
         <div class="box_2">
 
             <div class="user">
-                <i class="pi pi-user" (click)="userDropdown = !userDropdown" (blur)="userDropdown = !userDropdown"></i>
+                <i class="pi pi-user" (click)="userDropdown = !userDropdown"></i>
                 <div class=" pi-user-drop-down" *ngIf="userDropdown == true" (click)="userDropdown = false">
                     <div class="box" routerLink="profile" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true">
                         <i class="pi pi-user"></i>
@@ -66,8 +70,7 @@
         <div class="box_1">
 
             <div class="router-links-container">
-                <span routerLinkActive="active" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true"
-                    routerLink="home">Home</span>
+                <span routerLinkActive="active" routerLink="home">Home</span>
                 <span routerLinkActive="active" routerLink="contact">Contact</span>
             </div>
 

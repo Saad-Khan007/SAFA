@@ -1,0 +1,21 @@
+<div class="search-container">
+    <div class="header">
+        <h3>Search Results</h3>
+    </div>
+    <div class="nothing-found" *ngIf="searchList === undefined">
+        <p>
+            No results found.
+        </p>
+    </div>
+    <div class="card-container" *ngIf="searchList">
+        <div class="card" *ngFor="let item of searchList" routerLink="/product-detail/{{item.id}}">
+            <img src="{{item.img}}">
+            <div class="card-text">
+                <span class="type">{{item.type}}</span>
+                <span class="name">{{item.name}}</span>
+                <span class="price">Price: ${{item.rate}}.00</span>
+                <span class="desc">{{item.description}}</span>
+            </div>
+        </div>
+    </div>
+</div>

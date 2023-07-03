@@ -17,12 +17,22 @@ export class ProfileComponent {
   data: any;
   constructor(private userService: UserServiceService) { }
   ngOnInit() {
-    this.data = this.userService.userInfo
-    this.user = {
-      id: this.data.id,
-      Name: this.data.Name,
-      Password: this.data.Password,
-      Email: this.data.Email
+    const local: string | null = localStorage.getItem('user');
+    if (local !== null) {
+      const user = JSON.parse(local);
+      const userData = {
+        Name: user.name,
+        Email: user.email
+      }
+      this.userService.profileData(userData).subscribe(userInfo => {
+        this.data = userInfo;
+        this.user = {
+          id: this.data.id,
+          Name: this.data.Name,
+          Password: this.data.Password,
+          Email: this.data.Email
+        }
+      });
     }
   }
 }

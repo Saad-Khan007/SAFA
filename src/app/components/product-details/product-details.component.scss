@@ -1,0 +1,115 @@
+.product-container {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    margin-top: 30px;
+
+    .product-image {
+        width: 50%;
+
+        img {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+        }
+    }
+
+    .product-text {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        h2 {
+            font-size: 50px;
+            font-weight: 900;
+            color: var(--main);
+        }
+
+        .type {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: rgb(175, 175, 175);
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .quantity {
+            display: flex;
+            margin-top: 10px;
+
+            .btn1 {
+                padding: 10px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: all .3s ease-in-out;
+                border: 1px solid var(--main);
+
+                &:hover {
+                    background: var(--main);
+                    color: white;
+                    box-shadow: 0 0 10px var(--main);
+                }
+            }
+
+            input {
+                border: none;
+                width: fit-content;
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+
+            .btn {
+                display: inline-block;
+                padding: 10px;
+                border: 1px solid var(--main);
+                background: transparent;
+                color: var(--font);
+                border-radius: 10px;
+                font-size: 18px;
+                letter-spacing: 1px;
+                transition: all .3s ease-in-out;
+                text-decoration: none;
+                cursor: pointer;
+
+                i {
+                    font-size: 20px;
+                }
+
+                &:hover {
+                    background: var(--main);
+                    color: white;
+                    box-shadow: 0 0 10px var(--main);
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        padding: 20px;
+        .product-image {
+            width: 100% !important;
+
+        }
+
+        .product-text {
+            width: 100% !important; 
+        }
+
+    }
+
+}

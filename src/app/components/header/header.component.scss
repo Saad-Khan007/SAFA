@@ -36,6 +36,7 @@ header {
                 height: 45px;
                 background-image: linear-gradient(to right, var(--main_rgb_2) 0%, var(--main_rgb_1) 100%);
                 border-radius: 50px;
+                position: relative;
 
                 input {
                     width: 80%;
@@ -44,6 +45,31 @@ header {
                     border: none;
                     outline: none;
                     border-radius: 50px 0 0 50px;
+                }
+
+                .search-result {
+                    position: absolute;
+                    font-family: 'Open Sans', sans-serif;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: #fff;
+                    top: 100%;
+                    left: 10px;
+                    z-index: 1000;
+                    width: 78%;
+
+                    li {
+                        list-style: none;
+                        padding: 10px;
+                        cursor: pointer;
+                        border-bottom: 1px solid #eee;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            background-color: var(--main_rgb_1);
+                            color: #fff;
+                        }
+                    }
                 }
 
                 .search-icon {
@@ -229,7 +255,7 @@ header {
         padding: 25px 0 55px !important;
 
         .search-container {
-            position: absolute;
+            position: absolute !important;
             width: 100% !important;
             bottom: 0;
         }

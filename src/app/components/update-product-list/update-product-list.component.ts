@@ -54,7 +54,7 @@ export class UpdateProductListComponent {
     });
   }
   ngOnInit(): void {
-    let productId: string | null = this.route.snapshot.paramMap.get('id');
+    let productId: number | null = Number(this.route.snapshot.paramMap.get('id'));
     if (productId) {
       this.productService.getProduct(productId).subscribe((product) => {
         this.productData = product;
