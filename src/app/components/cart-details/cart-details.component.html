@@ -1,0 +1,55 @@
+<div class="cart-container">
+    <div class="header">
+        <h3>Cart Details</h3>
+    </div>
+    <div class="cart-details">
+        <div class="details">
+            <table>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Remove</th>
+                </tr>
+                <tr *ngFor="let cart of cartData">
+                    <td>
+                        <img src="{{cart.img}}">
+                    </td>
+                    <td>{{cart.name}}</td>
+                    <td>${{cart.rate}}.00</td>
+                    <td>{{cart.quantity}}</td>
+                    <td>
+                        <i class="pi pi-trash" title="Remove To Cart"></i>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <fieldset class="summary">
+            <legend>Summary</legend>
+            <div class="box">
+                <div class="value1">Amount</div>
+                <div class="value1">${{summary.price}}</div>
+            </div>
+            <div class="box">
+                <div class="value1">Tax</div>
+                <div class="value1">${{summary.tax}}</div>
+            </div>
+            <div class="box">
+                <div class="value1">Delivery</div>
+                <div class="value1">${{summary.delivery}}</div>
+            </div>
+            <div class="box">
+                <div class="value1">Discount</div>
+                <div class="value1">${{summary.discount}}</div>
+            </div>
+            <div class="box">
+                <div class="value2">Total</div>
+                <div class="value2">${{summary.total}}</div>
+            </div>
+            <div class="box">
+                <div class="btn" routerLink="/checkout">Checkout</div>
+            </div>
+        </fieldset>
+    </div>
+</div>

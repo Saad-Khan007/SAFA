@@ -1,24 +1,45 @@
 export interface UserInfo {
-    id?: Number;
-    Name: String,
-    Password?: String,
-    Email: String
+    id?: number;
+    Name: string,
+    Password?: string,
+    Email: string
 }
 export interface Product {
-    id?: Number;
-    description?: String;
-    name: String,
+    id?: number;
+    productId?: number;
+    description?: string;
+    quantity?: number;
+    name: string,
     rate: number,
-    type: String,
-    desc: String,
-    img: String,
+    type: string,
+    desc: string,
+    img: string,
+}
+export interface Cart {
+    id?: number;
+    description?: string;
+    quantity?: number;
+    name: string,
+    rate: number,
+    type: string,
+    desc: string,
+    img: string,
+    userId: number,
+    productId: number,
 }
 export interface SignUp {
-    Name: String,
-    Password: String,
-    Email: String
+    Name: string,
+    Password: string,
+    Email: string
 }
 export interface Login {
-    Email: String,
-    Password: String,
+    Email: string,
+    Password: string,
+}
+export interface Summary {
+    price: number,
+    discount: number,
+    tax: number,
+    delivery: number,
+    total: number
 }

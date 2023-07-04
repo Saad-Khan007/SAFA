@@ -1,0 +1,25 @@
+<div class="checkout-container">
+    <div class="header">
+        <h3>Checkout</h3>
+    </div>
+    <h1>Total Amount : <span>$500</span></h1>
+    <h1>Payment Method : <span>On Delivery</span></h1>
+    <fieldset>
+        <legend>Add Shipping Address</legend>
+        <span id="msg" *ngIf="msgSent">Message sent successfully.</span>
+        <form [formGroup]="form" name="submit-to-google-sheet">
+            <input type="email" formControlName="Email" placeholder="Your E-mail..">
+            <div *ngIf="form.get('Email')?.touched && form.get('Email')?.errors?.['required']" class="error">
+                Please enter an email.</div>
+            <div *ngIf="form.get('Email')?.touched && form.get('Email')?.errors?.['email']" class="error">
+                Invalid email.</div>
+            <input type="text" formControlName="Address" placeholder="Your Address..">
+            <div *ngIf="form.get('Address')?.touched && form.get('Address')?.errors?.['required']" class="error">Address
+                is required.</div>
+            <input type="text" formControlName="Contact" placeholder="Your Contact Details..">
+            <div *ngIf="form.get('Contact')?.touched && form.get('Contact')?.errors?.['required']" class="error">
+                Contact Details is required.</div>
+            <button type="submit" class="btn" [disabled]="form.invalid" (click)="submit()">Submit</button>
+        </form>
+    </fieldset>
+</div>

@@ -13,12 +13,16 @@
             <div class="btn1" (click)="quantityFunc('add')">+</div>
         </div>
         <div class="btn-container">
-            <div class="btn">
+            <div class="btn" *ngIf="!removeCart" (click)="addToCart()">
                 <i class="pi pi-cart-plus"></i>
                 Add to Cart
             </div>
-            <div class="btn">
+            <div class="btn" *ngIf="removeCart" (click)="removeToCart(product?.id)">
                 <i class="pi pi-shopping-cart"></i>
+                Remove From Cart
+            </div>
+            <div class="btn">
+                <i class="pi pi-shopping-bag"></i>
                 Buy Now
             </div>
         </div>

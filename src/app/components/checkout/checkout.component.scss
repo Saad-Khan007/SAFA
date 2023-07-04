@@ -1,0 +1,102 @@
+.checkout-container {
+    width: 90%;
+    margin: 30px 5%;
+    font-family: 'Open Sans', sans-serif;
+
+    h1 {
+        font-size: 20px;
+        font-weight: 600;
+
+        span {
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--main);
+        }
+
+        &:nth-child(2) {
+            margin-top: 10px;
+        }
+        &:nth-child(3) {
+            color: #919191;
+            margin-bottom: 10px;
+            font-size: 14px;
+            span{
+                font-size: 12px;
+                color: #919191;
+                // color: black    ;
+            }
+        }
+    }
+
+    fieldset {
+        border-radius: 5px;
+        margin: 20px 0;
+        padding: 20px;
+
+        legend {
+            margin-left: 0px;
+            font-size: 20px;
+            font-weight: 900;
+            color: var(--main);
+        }
+
+        #msg {
+            font-size: 18px;
+            color: var(--main);
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+
+            input,
+            textarea {
+                width: 100%;
+                border: 0;
+                outline: none;
+                background: var(--bg);
+                padding: 15px;
+                margin: 15px 0;
+                color: var(--font);
+                border: 1px solid var(--main);
+                font-size: 18px;
+                border-radius: 6px;
+                resize: none;
+            }
+
+            .error {
+                color: var(--main);
+                font-size: 14px;
+            }
+
+            .btn2 {
+                font-size: 18px;
+                background-color: transparent;
+                margin: 50px auto;
+            }
+
+            .btn {
+                display: inline-block;
+                padding: 10px 20px;
+                border: 1px solid var(--main);
+                background: transparent;
+                color: var(--font);
+                border-radius: 10px;
+                font-size: 16px;
+                letter-spacing: 1px;
+                transition: all .3s ease-in-out;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            .btn:hover {
+                background: var(--main);
+                color: white;
+                box-shadow: 0 0 10px var(--main);
+            }
+
+        }
+    }
+}

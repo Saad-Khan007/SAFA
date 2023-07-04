@@ -22,6 +22,8 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { UpdateProductListComponent } from './components/update-product-list/update-product-list.component';
 import { SearchListComponent } from './components/search-list/search-list.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { CartDetailsComponent } from './components/cart-details/cart-details.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     ProductListComponent,
     UpdateProductListComponent,
     SearchListComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CartDetailsComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

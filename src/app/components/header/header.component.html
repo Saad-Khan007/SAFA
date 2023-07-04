@@ -52,15 +52,15 @@
             </div>
 
             <i (click)="sidebarVisible = true" class="pi pi-bars"></i>
-            <i class="pi pi-heart" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true">
-                <div class="number">1</div>
+            <i class="pi pi-heart" routerLink="cart-detail">
+                <div class="number">{{cartItems}}</div>
             </i>
             <i class="pi pi-shopping-bag" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true">
-                <div class="number">1</div>
+                <div class="number">0</div>
             </i>
             <span class="pkrSpan" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true">
                 <i class="pi pi-dollar"></i>
-                <span class="pkrValueSpan">1.00</span>
+                <span class="pkrValueSpan">0.00</span>
             </span>
         </div>
 

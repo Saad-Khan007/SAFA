@@ -16,6 +16,7 @@ export class HeaderComponent {
   IsUserSignedUp: boolean = false;
   IsUserLoggedIn: boolean = false;
   searchList: undefined | Product[];
+  cartItems: number = 0;
   // IsLogInSignUp: boolean = false;
   constructor(private userService: UserServiceService, private router: Router, private productService: ProductServiceService) {
     this.userService.IsUserSignedUp.subscribe((user: boolean) => {
@@ -28,7 +29,7 @@ export class HeaderComponent {
   hideSearch() {
     this.searchList = undefined;
   }
-  submitSearch(value: string){
+  submitSearch(value: string) {
     this.router.navigate([`search/${value}`])
   }
   searchProduct(event: KeyboardEvent) {
@@ -42,20 +43,33 @@ export class HeaderComponent {
       })
     }
   }
-  // ngOnInit(): void {
-  //   this.router.events.subscribe((event: any) => {
-  //     if (event.url) {
-  //       if (localStorage.getItem("user") && (event.url.includes('login') || event.url.includes('signup'))) { 
-  //         console.warn("Signup or login Success")
-  //         this.IsLogInSignUp = true;
-  //       }else{
-  //         console.warn("Signup or login Failure")
-  //         this.IsLogInSignUp = false;
-  //       }
-  //     }
-  //   })
-  // }
+  ngOnInit(): void {
+    let cartData = localStorage.getItem('localCart');
+    if (cartData) {
+      this.cartItems = JSON.parse(cartData).length;
+    }
+    this.productService.cartData.subscribe(data => {
+      this.cartItems = data.length;
+    })
+    let user = localStorage.getItem('user');
+    let userId = user && JSON.parse(user).id;
+    if (user && userId) {
+      this.productService.getCartList(userId);
+    }
+    //   this.router.events.subscribe((event: any) => {
+    //     if (event.url) {
+    //       if (localStorage.getItem("user") && (event.url.includes('login') || event.url.includes('signup'))) { 
+    //         console.warn("Signup or login Success")
+    //         this.IsLogInSignUp = true;
+    //       }else{
+    //         console.warn("Signup or login Failure")
+    //         this.IsLogInSignUp = false;
+    //       }
+    //     }
+    //   })
+  }
   logOut() {
     this.userService.logOut();
+    this.productService.cartData.emit([])
   }
 }

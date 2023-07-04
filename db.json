@@ -23,14 +23,6 @@
       "id": 20
     },
     {
-      "name": "Smoke Grenade",
-      "type": "Grenade",
-      "desc": "Its a ver good gun. Hmmmm",
-      "img": "../../../assets/Img/Category/img-2.jpg",
-      "rate": 50,
-      "id": 21
-    },
-    {
       "name": "Dragunov SVD",
       "type": "Sniper",
       "desc": "Its a ver good gun. Hmmmm",
@@ -199,6 +191,30 @@
       "name": "Semi-Automatic Rifle",
       "rate": 3120,
       "description": "Semi-automatic rifles are firearms that fire one round per trigger pull, automatically chambering the next round. They offer a balance of accuracy, firepower, and ease of use, making them versatile for various applications."
+    }
+  ],
+  "cart": [
+    {
+      "type": "Grenade",
+      "img": "../../../assets/Img/Category/img-2-1.jpg",
+      "name": "Flash Grenade",
+      "rate": 10,
+      "description": "Flash grenades, also known as stun grenades, are non-lethal explosive devices used to temporarily disorient and distract enemies. They produce a blinding flash of light and loud noise upon detonation.",
+      "quantity": 1,
+      "userId": 2,
+      "productId": 3,
+      "id": 3
+    },
+    {
+      "type": "Grenade",
+      "img": "../../../assets/Img/Category/img-2-1.jpg",
+      "name": "Flash Grenade",
+      "rate": 10,
+      "description": "Flash grenades, also known as stun grenades, are non-lethal explosive devices used to temporarily disorient and distract enemies. They produce a blinding flash of light and loud noise upon detonation.",
+      "quantity": 5,
+      "userId": 1,
+      "productId": 3,
+      "id": 6
     }
   ]
 }

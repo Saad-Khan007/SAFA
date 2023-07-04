@@ -11,6 +11,8 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { UpdateProductListComponent } from './components/update-product-list/update-product-list.component';
 import { SearchListComponent } from './components/search-list/search-list.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { CartDetailsComponent } from './components/cart-details/cart-details.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 const routes: Routes = [
   {
@@ -56,12 +58,21 @@ const routes: Routes = [
     component: ProductDetailsComponent,
   },
   {
+    path: 'cart-detail',
+    component: CartDetailsComponent,
+  },
+  {
+    path: 'checkout',
+    component: CheckoutComponent,
+  },
+  {
     path: '',
-    component: HomeComponent
+    redirectTo: '/home',
+    pathMatch: 'full'
   },
   {
     path: '**',
-    component: HomeComponent
+    redirectTo: '/home'
   },
 ];
 

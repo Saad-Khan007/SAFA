@@ -13,8 +13,8 @@ export class SignupGuardGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     if (localStorage.getItem('user')) {
       return false;
+    } else {
+      return true
     }
-    return !this.userService.IsUserSignedUp
   }
-
 }
