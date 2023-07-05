@@ -39,7 +39,6 @@ export class UserServiceService {
           this.IsUserSignedUp.next(true);
           this.router.navigate(['home']);
         } else {
-          console.log("Error");
           this.IsLoginError.next(true);
         }
       })
@@ -58,7 +57,6 @@ export class UserServiceService {
           this.IsUserLoggedIn.next(true);
           this.router.navigate(['home']);
         } else {
-          console.log("Error");
           this.IsLoginError.next(true);
         }
       })

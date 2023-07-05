@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 // PrimeNg Modules
 import { SidebarModule } from 'primeng/sidebar';
@@ -24,6 +25,7 @@ import { SearchListComponent } from './components/search-list/search-list.compon
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { CartDetailsComponent } from './components/cart-details/cart-details.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { MyOrderComponent } from './components/my-order/my-order.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     SearchListComponent,
     ProductDetailsComponent,
     CartDetailsComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    MyOrderComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     ButtonModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

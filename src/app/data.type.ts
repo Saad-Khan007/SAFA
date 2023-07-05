@@ -1,11 +1,19 @@
 export interface UserInfo {
-    id?: number;
+    id?: number,
     Name: string,
     Password?: string,
     Email: string
 }
+export interface Order {
+    Address: string
+    Contact: string
+    Email: string,
+    Total: number,
+    UserId: number,
+    id?: number
+}
 export interface Product {
-    id?: number;
+    id?: number,
     productId?: number;
     description?: string;
     quantity?: number;
@@ -16,9 +24,9 @@ export interface Product {
     img: string,
 }
 export interface Cart {
-    id?: number;
-    description?: string;
-    quantity?: number;
+    id?: number,
+    description?: string,
+    quantity?: number,
     name: string,
     rate: number,
     type: string,

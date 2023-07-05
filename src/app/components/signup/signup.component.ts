@@ -11,8 +11,6 @@ import { UserServiceService } from 'src/app/services/user-service.service';
 export class SignupComponent {
   form: FormGroup;
   msgSent: boolean = false;
-  date: any;
-  time: any;
   constructor(private formBuilder: FormBuilder, private userService: UserServiceService) {
     this.form = this.formBuilder.group({
       Name: [null, [Validators.required, Validators.pattern(/^[a-zA-Z\s]+$/)]],

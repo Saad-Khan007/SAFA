@@ -20,7 +20,7 @@
                     <td>${{cart.rate}}.00</td>
                     <td>{{cart.quantity}}</td>
                     <td>
-                        <i class="pi pi-trash" title="Remove To Cart"></i>
+                        <i class="pi pi-trash" (click)="removeToCart(cart.id)" title="Remove To Cart"></i>
                     </td>
                 </tr>
             </table>

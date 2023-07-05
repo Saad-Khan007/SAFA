@@ -13,6 +13,7 @@ import { SearchListComponent } from './components/search-list/search-list.compon
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { CartDetailsComponent } from './components/cart-details/cart-details.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { MyOrderComponent } from './components/my-order/my-order.component';
 
 const routes: Routes = [
   {
@@ -64,6 +65,10 @@ const routes: Routes = [
   {
     path: 'checkout',
     component: CheckoutComponent,
+  },
+  {
+    path: 'order',
+    component: MyOrderComponent,
   },
   {
     path: '',

@@ -17,7 +17,7 @@ export class HeaderComponent {
   IsUserLoggedIn: boolean = false;
   searchList: undefined | Product[];
   cartItems: number = 0;
-  // IsLogInSignUp: boolean = false;
+  searchInput: string | undefined;
   constructor(private userService: UserServiceService, private router: Router, private productService: ProductServiceService) {
     this.userService.IsUserSignedUp.subscribe((user: boolean) => {
       this.IsUserSignedUp = user;
@@ -27,9 +27,12 @@ export class HeaderComponent {
     })
   }
   hideSearch() {
-    this.searchList = undefined;
+    setTimeout(() => {
+      this.searchList = undefined;
+    },500)
   }
   submitSearch(value: string) {
+    this.searchInput = value;
     this.router.navigate([`search/${value}`])
   }
   searchProduct(event: KeyboardEvent) {
@@ -56,17 +59,6 @@ export class HeaderComponent {
     if (user && userId) {
       this.productService.getCartList(userId);
     }
-    //   this.router.events.subscribe((event: any) => {
-    //     if (event.url) {
-    //       if (localStorage.getItem("user") && (event.url.includes('login') || event.url.includes('signup'))) { 
-    //         console.warn("Signup or login Success")
-    //         this.IsLogInSignUp = true;
-    //       }else{
-    //         console.warn("Signup or login Failure")
-    //         this.IsLogInSignUp = false;
-    //       }
-    //     }
-    //   })
   }
   logOut() {
     this.userService.logOut();

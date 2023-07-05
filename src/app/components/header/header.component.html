@@ -8,13 +8,13 @@
         <div class="box_1">
             <img routerLink="home" style="cursor: pointer;" src="../../../assets/Logo/SAFA_Main_Logo.png"
                 alt="SAFA_Logo">
-            <div class="search-container" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true">
-                <input type="text" #search (keyup)="searchProduct($event)" (blur)="hideSearch()" placeholder="Search">
+            <div class="search-container">
+                <input type="text" #search [ngModel]="searchInput" (keyup)="searchProduct($event)" (blur)="hideSearch()" placeholder="Search">
                 <div class="search-icon" (click)="submitSearch(search.value)">
                     <i class="pi pi-search"></i>
                 </div>
                 <ul class="search-result" *ngIf="searchList">
-                    <li *ngFor="let item of searchList">{{ item.name }}</li>
+                    <li *ngFor="let item of searchList" (click)="submitSearch(item.name)">{{ item.name }}</li>
                 </ul>
             </div>
         </div>
@@ -36,6 +36,10 @@
                         <i class="pi pi-list"></i>
                         Product List
                     </div>
+                    <!-- <div class="box" routerLink="order" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true">
+                        <i class="pi pi-list"></i>
+                        My Orders
+                    </div> -->
                     <div class="box" (click)="logOut()" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true">
                         <i class="pi pi-sign-out"></i>
                         Log Out
@@ -52,16 +56,16 @@
             </div>
 
             <i (click)="sidebarVisible = true" class="pi pi-bars"></i>
-            <i class="pi pi-heart" routerLink="cart-detail">
+            <i class="pi pi-heart" [routerLink]="cartItems>0?'cart-detail':null" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true">
                 <div class="number">{{cartItems}}</div>
             </i>
-            <i class="pi pi-shopping-bag" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true">
-                <div class="number">0</div>
+            <i class="pi pi-shopping-bag" routerLink="order" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true">
+                <!-- <div class="number">0</div> -->
             </i>
-            <span class="pkrSpan" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true">
+            <!-- <span class="pkrSpan" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true">
                 <i class="pi pi-dollar"></i>
                 <span class="pkrValueSpan">0.00</span>
-            </span>
+            </span> -->
         </div>
 
     </div>

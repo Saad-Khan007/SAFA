@@ -70,7 +70,6 @@ export class ProductDetailsComponent {
           if (data) {
             this.productService.getCartList(userId);
             this.removeCart = true;
-            console.log('Success');
           }
         })
       }
@@ -83,13 +82,11 @@ export class ProductDetailsComponent {
         this.productService.localRemoveToCart(id)
       }
     } else {
-      console.log(this.cartData);
       let user = localStorage.getItem('user');
       let userId = user && JSON.parse(user).id;
       this.cartData && this.productService.removeToCart(this.cartData.id).subscribe((data) => {
         if (data) {
           this.productService.getCartList(userId);
-          console.log('Success');
         }
       })
     }

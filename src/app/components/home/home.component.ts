@@ -116,7 +116,7 @@ export class HomeComponent {
         img2: '../../../assets/Img/Category/img-6-1.jpg',
         img3: '../../../assets/Img/Category/img-6-2.jpg',
         type: 'Armor',
-        name: 'Sheild',
+        name: 'Shield',
         rate: '200',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, debitis.',
         time: {
@@ -423,8 +423,8 @@ export class HomeComponent {
   deliveryRulesBoxes = [
     {
       img: '../../../assets/Img/Rules/1.png',
-      title: 'Free Shiping.',
-      desc: 'Free Worldwide Shiping On All Area On Order Above $100'
+      title: 'Free Shipping.',
+      desc: 'Free Worldwide ShiPping On All Area On Order Above $100'
     },
     {
       img: '../../../assets/Img/Rules/2.png',
@@ -434,7 +434,7 @@ export class HomeComponent {
     {
       img: '../../../assets/Img/Rules/3.png',
       title: '24/7 Friendly Support.',
-      desc: 'Our Support Team Allways Ready For You To 7 Days A Week'
+      desc: 'Our Support Team Always Ready For You To 7 Days A Week'
     },
     {
       img: '../../../assets/Img/Rules/4.png',
@@ -442,8 +442,6 @@ export class HomeComponent {
       desc: 'We Ensure 100% Secure Payment With Online Payment'
     },
   ]
-
-  // Functions starts from here
 
 
   popFunc(number: number): void {

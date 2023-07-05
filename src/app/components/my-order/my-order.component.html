@@ -1,0 +1,24 @@
+<div class="product-list-container">
+    <div class="header">
+        <h3>My Orders</h3>
+    </div>
+    <fieldset>
+        <legend>List</legend>
+        <table>
+            <tr>
+                <th>Order ID</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+            <tr *ngFor="let order of orderData">
+                <td>#{{order.id}}</td>
+                <td>${{order.Total}}</td>
+                <td>In Progress</td>
+                <td class="icon">
+                    <i class="pi pi-trash" (click)="cancelOrder(order.id)" title="Delete"></i>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</div>

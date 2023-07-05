@@ -63,7 +63,6 @@ export class AddProductComponent {
         rate: this.form.value.Price,
       };
       this.productService.addProduct(formData).subscribe(res => {
-        console.log(res);
         if (res) {
           this.msgSent = true;
         }

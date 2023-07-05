@@ -11,9 +11,7 @@ import { UserServiceService } from 'src/app/services/user-service.service';
 })
 export class LoginComponent {
   form: FormGroup;
-  date: any;
-  time: any;
-  constructor(private formBuilder: FormBuilder, private userService: UserServiceService,private productService: ProductServiceService) {
+  constructor(private formBuilder: FormBuilder, private userService: UserServiceService, private productService: ProductServiceService) {
     this.form = this.formBuilder.group({
       Password: [null, [Validators.required, Validators.pattern(/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_\-+=~`[\]{}|\\:;"'<>,.?/]).{8,}$/)]],
       Email: [null, [Validators.required, Validators.email]],
@@ -25,28 +23,24 @@ export class LoginComponent {
     let userId = user && JSON.parse(user).id;
     if (data) {
       let cart: Product[] = JSON.parse(data);
-      cart.forEach((product: Product,index) => {
+      cart.forEach((product: Product, index) => {
         let cartItem: Cart = {
           ...product,
           productId: product.id as number,
           userId
         }
         delete cartItem.id;
-        setTimeout(()=>{
-          this.productService.addToCart(cartItem).subscribe((data) => {
-            if (data) {
-              console.log("Item stored in DB");
-            }
-          })
-          if(cart.length === index+1) {
+        setTimeout(() => {
+          this.productService.addToCart(cartItem)
+          if (cart.length === index + 1) {
             localStorage.removeItem('localCart');
           }
-        },1000)
+        }, 1000)
       })
     }
-    setTimeout(()=>{
+    setTimeout(() => {
       this.productService.getCartList(userId);
-    },2000)
+    }, 2000)
   }
   submit() {
     if (this.form.valid) {
@@ -57,7 +51,7 @@ export class LoginComponent {
       this.userService.logInUser(formData);
       setTimeout(() => {
         this.localToRemoteCart()
-      },1200)
+      }, 1200)
       this.form.reset();
     }
   }

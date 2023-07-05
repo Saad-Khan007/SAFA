@@ -15,30 +15,6 @@
   ],
   "product": [
     {
-      "name": "Dessert Eagle",
-      "type": "Pistol",
-      "desc": "Its a ver good gun. Hmmmm",
-      "img": "../../../assets/Img/Category/img-1.jpg",
-      "rate": 100,
-      "id": 20
-    },
-    {
-      "name": "Dragunov SVD",
-      "type": "Sniper",
-      "desc": "Its a ver good gun. Hmmmm",
-      "img": "../../../assets/Img/Category/img-3.jpg",
-      "rate": 1720,
-      "id": 22
-    },
-    {
-      "name": "Bolt-Action Rifle",
-      "type": "Rifle",
-      "desc": "Its a ver good gun. Hmmmm",
-      "img": "../../../assets/Img/Category/img-4.jpg",
-      "rate": 1200,
-      "id": 23
-    },
-    {
       "name": "Assualt Rifle",
       "type": "Rifle",
       "desc": "Assault rifles are selective-fire firearms capable of firing in both semi-automatic and automatic modes. They are designed for rapid fire and are commonly used by military forces around the world.",
@@ -207,14 +183,40 @@
     },
     {
       "type": "Grenade",
-      "img": "../../../assets/Img/Category/img-2-1.jpg",
-      "name": "Flash Grenade",
-      "rate": 10,
-      "description": "Flash grenades, also known as stun grenades, are non-lethal explosive devices used to temporarily disorient and distract enemies. They produce a blinding flash of light and loud noise upon detonation.",
-      "quantity": 5,
+      "img": "../../../assets/Img/Category/img-2-2.jpg",
+      "name": "Smoke Grenade",
+      "rate": 15,
+      "description": "Smoke grenades are canisters that release a dense cloud of colored smoke when activated. They are commonly used for signaling, obscuring vision, and creating cover during military and tactical operations.",
+      "quantity": 4,
       "userId": 1,
-      "productId": 3,
-      "id": 6
+      "productId": 4,
+      "id": 4
+    }
+  ],
+  "orders": [
+    {
+      "Address": "lksnsln",
+      "Contact": "23123",
+      "Email": "sa@s",
+      "Total": 66.5,
+      "UserId": 1,
+      "id": 1
+    },
+    {
+      "Address": "417-A1 PGECHS",
+      "Contact": "1122",
+      "Email": "saadkhan322@gmail.com",
+      "Total": 284.5,
+      "UserId": 1,
+      "id": 3
+    },
+    {
+      "Address": "sad",
+      "Contact": "12",
+      "Email": "s@w",
+      "Total": 230,
+      "UserId": 1,
+      "id": 5
     }
   ]
 }
