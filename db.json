@@ -2,7 +2,7 @@
   "user": [
     {
       "Name": "Saad Khan",
-      "Password": "Mrkhan@322",
+      "Password": "Saad@123",
       "Email": "saadkhan322417@gmail.com",
       "id": 1
     },
@@ -11,6 +11,12 @@
       "Password": "Q@q12345",
       "Email": "q@q",
       "id": 2
+    },
+    {
+      "Name": "SSs",
+      "Password": "Qwerty@123",
+      "Email": "safa1@g",
+      "id": 3
     }
   ],
   "product": [
@@ -180,17 +186,6 @@
       "userId": 2,
       "productId": 3,
       "id": 3
-    },
-    {
-      "type": "Grenade",
-      "img": "../../../assets/Img/Category/img-2-2.jpg",
-      "name": "Smoke Grenade",
-      "rate": 15,
-      "description": "Smoke grenades are canisters that release a dense cloud of colored smoke when activated. They are commonly used for signaling, obscuring vision, and creating cover during military and tactical operations.",
-      "quantity": 4,
-      "userId": 1,
-      "productId": 4,
-      "id": 4
     }
   ],
   "orders": [
@@ -217,6 +212,14 @@
       "Total": 230,
       "UserId": 1,
       "id": 5
+    },
+    {
+      "Address": "sas",
+      "Contact": "sw2",
+      "Email": "s@s",
+      "Total": 1570.7,
+      "UserId": 1,
+      "id": 6
     }
   ]
 }
