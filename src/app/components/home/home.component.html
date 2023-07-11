@@ -38,7 +38,7 @@
         </div>
     </div>
     <div class="card-container" *ngIf="popular_Id === 3">
-        <div class="card" *ngFor="let card of popularFeatured[popular_Id]" routerLink="/product-detail/{{card.id}}">
+        <div class="card" *ngFor="let card of popularFeatured[popular_Id]" routerLink="/user-product-detail/{{card.id}}">
             <img src="{{card.img}}">
             <div class="card-text">
                 <div class="type">{{card.type}}</div>
