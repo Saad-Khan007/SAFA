@@ -143,17 +143,6 @@ header {
                 display: none;
             }
 
-            .pkrSpan {
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-size: 15px;
-                font-weight: 500;
-                letter-spacing: -.1em;
-
-                i {
-                    font-size: 13px;
-                }
-            }
-
             i {
                 font-size: 25px;
                 transition: all .3s ease-in-out;
@@ -267,20 +256,8 @@ header {
         }
 
         .box_2 {
-            .pi-heart {
-                display: none !important;
-            }
-
-            .pi-shopping-bag {
-                display: none !important;
-            }
-
             .pi-bars {
                 display: inline-block !important;
-            }
-
-            .pkrSpan {
-                display: none !important;
             }
         }
     }

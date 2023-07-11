@@ -1,225 +1,87 @@
 {
   "user": [
     {
-      "Name": "Saad Khan",
-      "Password": "Saad@123",
-      "Email": "saadkhan322417@gmail.com",
+      "Name": "SAFA",
+      "Password": "Safa@123",
+      "Email": "safa@part",
       "id": 1
-    },
-    {
-      "Name": "sd",
-      "Password": "Q@q12345",
-      "Email": "q@q",
-      "id": 2
-    },
-    {
-      "Name": "SSs",
-      "Password": "Qwerty@123",
-      "Email": "safa1@g",
-      "id": 3
     }
   ],
-  "product": [
-    {
-      "name": "Assualt Rifle",
-      "type": "Rifle",
-      "desc": "Assault rifles are selective-fire firearms capable of firing in both semi-automatic and automatic modes. They are designed for rapid fire and are commonly used by military forces around the world.",
-      "img": "../../../assets/Img/Category/img-4.jpg",
-      "rate": 2300,
-      "id": 24
-    }
-  ],
+  "product": [],
   "popularFeatured": [
     {
       "id": 1,
-      "type": "Pistol",
-      "img": "../../../assets/Img/Category/img-1-1.jpg",
-      "name": "Derringers",
-      "rate": 100,
-      "description": "Derringers are small, compact pistols known for their concealability. They are typically designed for close-range self-defense and are popular as backup weapons."
+      "type": "Wheel",
+      "img": "../../../assets/Img/Category/img-1.jpg",
+      "name": "Two Color Car Wheel",
+      "rate": 602,
+      "description": "These two-color car wheels are a great way to add a touch of style to your vehicle. They are made of high-quality materials and are sure to last for many years."
     },
     {
       "id": 2,
-      "type": "Pistol",
-      "img": "../../../assets/Img/Category/img-1-4.jpg",
-      "name": "Semi-automatic Pistols",
-      "rate": 200,
-      "description": "Semi-automatic pistols are handguns that use the energy from the fired cartridge to automatically chamber the next round. They are widely used by military, law enforcement, and civilian shooters."
+      "type": "Engine Accessories",
+      "img": "../../../assets/Img/Category/img-2.jpg",
+      "name": "Alternator Engine Car",
+      "rate": 38,
+      "description": "This alternator is a great way to keep your car's engine running smoothly. It is made of high-quality materials and is sure to last for many years."
     },
     {
       "id": 3,
-      "type": "Grenade",
-      "img": "../../../assets/Img/Category/img-2-1.jpg",
-      "name": "Flash Grenade",
-      "rate": 10,
-      "description": "Flash grenades, also known as stun grenades, are non-lethal explosive devices used to temporarily disorient and distract enemies. They produce a blinding flash of light and loud noise upon detonation."
+      "type": "Body Parts",
+      "img": "../../../assets/Img/Category/img-3.jpg",
+      "name": "Car Body Parts",
+      "rate": 122,
+      "description": "These car body parts are a great way to repair your vehicle. They are made of high-quality materials and are sure to last for many years."
     },
     {
       "id": 4,
-      "type": "Grenade",
-      "img": "../../../assets/Img/Category/img-2-2.jpg",
-      "name": "Smoke Grenade",
-      "rate": 15,
-      "description": "Smoke grenades are canisters that release a dense cloud of colored smoke when activated. They are commonly used for signaling, obscuring vision, and creating cover during military and tactical operations."
+      "type": "Repaired Parts",
+      "img": "../../../assets/Img/Category/img-4.jpg",
+      "name": "Repaired Car Engine",
+      "rate": 241,
+      "description": "This repaired car engine is a great way to get your vehicle back on the road. It is made of high-quality materials and is sure to last for many years."
     },
     {
       "id": 5,
-      "type": "Sniper",
-      "img": "../../../assets/Img/Category/img-3-3.jpg",
-      "name": "Barrett M82/M107",
-      "rate": 1700,
-      "description": "The Barrett M82/M107 is a powerful anti-materiel sniper rifle known for its long-range accuracy and stopping power. It is often used by military and law enforcement agencies for engaging targets at extreme distances."
+      "type": "Brakes",
+      "img": "../../../assets/Img/Category/img-5.jpg",
+      "name": "Brakes 1",
+      "rate": 1202,
+      "description": "These brakes are a great way to improve your car's stopping power. They are made of high-quality materials and are sure to last for many years."
     },
     {
       "id": 6,
-      "type": "Knife",
+      "type": "Brakes",
       "img": "../../../assets/Img/Category/img-5-1.jpg",
-      "name": "Tactical Knife",
-      "rate": 60,
-      "description": "Tactical knives are versatile and durable tools designed for various tasks, including cutting, slicing, prying, and self-defense. They are commonly used by military personnel, law enforcement officers, and outdoor enthusiasts."
+      "name": "Brakes 2",
+      "rate": 902,
+      "description": "These brakes are a great way to improve your car's stopping power. They are made of high-quality materials and are sure to last for many years."
     },
     {
       "id": 7,
-      "type": "Dagger",
-      "img": "../../../assets/Img/Category/img-5-3.jpg",
-      "name": "Khanjar",
-      "rate": 230,
-      "description": "Khanjar is a traditional curved dagger originating from the Middle East and South Asia. It is known for its distinctive design and is often used as a ceremonial weapon or decorative item."
+      "type": "Car Parts",
+      "img": "../../../assets/Img/Category/img-6.jpg",
+      "name": "Car Seat Cushion-1",
+      "rate": 890,
+      "description": "This car seat cushion is a great way to add comfort and support to your car's seats. It is made of high-quality materials and is sure to last for many years."
     },
     {
       "id": 8,
-      "type": "Pistol",
-      "img": "../../../assets/Img/Category/img-1-2.jpg",
-      "name": "Pocket Pistols",
-      "rate": 150,
-      "description": "Pocket pistols are compact handguns designed to be easily carried in a pocket or concealed holster. They offer a balance of size, concealability, and firepower, making them popular for personal protection."
+      "type": "Car Parts",
+      "img": "../../../assets/Img/Category/img-6-1.jpg",
+      "name": "Car Seat Cushion-1",
+      "rate": 900,
+      "description": "This pocket pistol is a great way to protect yourself. It is made of high-quality materials and is sure to last for many years."
     },
     {
       "id": 9,
-      "type": "Pistol",
-      "img": "../../../assets/Img/Category/img-1-3.jpg",
-      "name": "Double-Action Pistols",
-      "rate": 170,
-      "description": "Double-action pistols are handguns that can be fired either in single action (with the hammer cocked) or double action (with the hammer decocked). They provide versatility and are commonly used by law enforcement and civilians."
-    },
-    {
-      "id": 10,
-      "type": "Grenade",
-      "img": "../../../assets/Img/Category/img-2-3.jpg",
-      "name": "Concussion Grenade",
-      "rate": 17,
-      "description": "Concussion grenades are explosive devices that produce a powerful blast wave upon detonation. They are designed to disorient, stun, or incapacitate targets within their blast radius."
-    },
-    {
-      "id": 11,
-      "type": "Grenade",
-      "img": "../../../assets/Img/Category/img-2-4.jpg",
-      "name": "Fragmentation Grenade",
-      "rate": 20,
-      "description": "Fragmentation grenades are explosive devices that release shrapnel upon detonation. They are used primarily for anti-personnel purposes, inflicting damage through the blast and the fragments."
-    },
-    {
-      "id": 12,
-      "type": "Sniper",
-      "img": "../../../assets/Img/Category/img-3-1.jpg",
-      "name": "Sako TRG",
-      "rate": 1000,
-      "description": "The Sako TRG is a bolt-action sniper rifle known for its accuracy, reliability, and modularity. It is favored by military and law enforcement snipers for long-range precision shooting."
-    },
-    {
-      "id": 13,
-      "type": "Sniper",
-      "img": "../../../assets/Img/Category/img-3-2.jpg",
-      "name": "Dragunov SVD",
-      "rate": 1500,
-      "description": "The Dragunov SVD is a semi-automatic sniper rifle developed in the Soviet Union. It has been widely used by various military and law enforcement units around the world due to its accuracy and reliability."
-    },
-    {
-      "id": 15,
-      "type": "Sniper",
-      "img": "../../../assets/Img/Category/img-3-4.jpg",
-      "name": "Mosin-Nagant M91/30",
-      "rate": 2000,
-      "description": "The Mosin-Nagant M91/30 is a bolt-action rifle that served as the standard issue firearm for the Russian military during World War I and World War II. It is known for its reliability and robustness."
-    },
-    {
-      "id": 16,
-      "type": "Rifle",
-      "img": "../../../assets/Img/Category/img-4-1-1.jpg",
-      "name": "Assault Rifle",
-      "rate": 900,
-      "description": "Assault rifles are selective-fire firearms capable of firing in both semi-automatic and automatic modes. They are designed for rapid fire and are commonly used by military forces around the world."
-    },
-    {
-      "id": 17,
-      "type": "Rifle",
-      "img": "../../../assets/Img/Category/img-4-2-2.jpg",
-      "name": "Bolt-Action Rifle",
-      "rate": 1050,
-      "description": "Bolt-action rifles are firearms that require manual cycling of the bolt to chamber the next round. They are known for their accuracy and are widely used for hunting, target shooting, and military applications."
-    },
-    {
-      "id": 18,
-      "type": "Rifle",
-      "img": "../../../assets/Img/Category/img-4-3.jpg",
-      "name": "Lever-Action Rifle",
-      "rate": 1370,
-      "description": "Lever-action rifles are firearms that use a lever mechanism to load and chamber rounds. They are commonly associated with Western-style rifles and are popular among hunters and enthusiasts for their nostalgic appeal."
-    },
-    {
-      "id": 19,
-      "type": "Rifle",
-      "img": "../../../assets/Img/Category/img-4-4.jpg",
-      "name": "Semi-Automatic Rifle",
-      "rate": 3120,
-      "description": "Semi-automatic rifles are firearms that fire one round per trigger pull, automatically chambering the next round. They offer a balance of accuracy, firepower, and ease of use, making them versatile for various applications."
+      "type": "Car Parts",
+      "img": "../../../assets/Img/Category/img-7.jpg",
+      "name": "Car Steering",
+      "rate": 122,
+      "description": "This car steering wheel is a great way to improve your car's handling. It is made of high-quality materials and is sure to last for many years."
     }
   ],
-  "cart": [
-    {
-      "type": "Grenade",
-      "img": "../../../assets/Img/Category/img-2-1.jpg",
-      "name": "Flash Grenade",
-      "rate": 10,
-      "description": "Flash grenades, also known as stun grenades, are non-lethal explosive devices used to temporarily disorient and distract enemies. They produce a blinding flash of light and loud noise upon detonation.",
-      "quantity": 1,
-      "userId": 2,
-      "productId": 3,
-      "id": 3
-    }
-  ],
-  "orders": [
-    {
-      "Address": "lksnsln",
-      "Contact": "23123",
-      "Email": "sa@s",
-      "Total": 66.5,
-      "UserId": 1,
-      "id": 1
-    },
-    {
-      "Address": "417-A1 PGECHS",
-      "Contact": "1122",
-      "Email": "saadkhan322@gmail.com",
-      "Total": 284.5,
-      "UserId": 1,
-      "id": 3
-    },
-    {
-      "Address": "sad",
-      "Contact": "12",
-      "Email": "s@w",
-      "Total": 230,
-      "UserId": 1,
-      "id": 5
-    },
-    {
-      "Address": "sas",
-      "Contact": "sw2",
-      "Email": "s@s",
-      "Total": 1570.7,
-      "UserId": 1,
-      "id": 6
-    }
-  ]
+  "cart": [],
+  "orders": []
 }

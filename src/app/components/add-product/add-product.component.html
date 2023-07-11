@@ -20,8 +20,7 @@
                 class="error">
                 Description is required.</div>
             <select formControlName="Image">
-                <option value="">Enter Product Image</option>
-                <option [value]="option" *ngFor="let option of options">{{option}}</option>
+                <option [value]="option.img" *ngFor="let option of options">{{option.name}}</option>
             </select>
             <div *ngIf="form.get('Image')?.touched && form.get('Image')?.errors?.['required']" class="error">
                 Image is required.</div>
