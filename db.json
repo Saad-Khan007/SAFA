@@ -7,7 +7,32 @@
       "id": 1
     }
   ],
-  "product": [],
+  "product": [
+    {
+      "name": "Alloy wheel",
+      "type": "Wheel",
+      "desc": "These two-color car wheels are a great way to add a touch of style to your vehicle. They are made of high-quality materials and are sure to last for many years.",
+      "img": "../../../assets/Img/Category/img-1-2.jpg",
+      "rate": 800,
+      "id": 1
+    },
+    {
+      "name": "Wheel 1 ",
+      "type": "Wheel",
+      "desc": "These two-color car wheels are a great way to add a touch of style to your vehicle. They are made of high-quality materials and are sure to last for many years.",
+      "img": "../../../assets/Img/Category/img-1-1.jpg",
+      "rate": 790,
+      "id": 2
+    },
+    {
+      "name": "Wheel 2",
+      "type": "Wheel",
+      "desc": "These two-color car wheels are a great way to add a touch of style to your vehicle. They are made of high-quality materials and are sure to last for many years.",
+      "img": "../../../assets/Img/Category/img-1.jpg",
+      "rate": 990,
+      "id": 3
+    }
+  ],
   "popularFeatured": [
     {
       "id": 1,
