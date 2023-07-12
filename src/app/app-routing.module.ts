@@ -14,6 +14,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { CartDetailsComponent } from './components/cart-details/cart-details.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { MyOrderComponent } from './components/my-order/my-order.component';
+import { UserProductDetailsComponent } from './components/user-product-details/user-product-details.component';
 
 const routes: Routes = [
   {
@@ -57,6 +58,10 @@ const routes: Routes = [
   {
     path: 'product-detail/:productId',
     component: ProductDetailsComponent,
+  },
+  {
+    path: 'user-product-detail/:productId',
+    component: UserProductDetailsComponent,
   },
   {
     path: 'cart-detail',

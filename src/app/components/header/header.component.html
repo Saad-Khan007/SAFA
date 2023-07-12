@@ -35,10 +35,6 @@
                         <i class="pi pi-list"></i>
                         Product List
                     </div>
-                    <!-- <div class="box" routerLink="order" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true">
-                        <i class="pi pi-list"></i>
-                        My Orders
-                    </div> -->
                     <div class="box" (click)="logOut()" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true">
                         <i class="pi pi-sign-out"></i>
                         Log Out
@@ -54,17 +50,12 @@
                 </div>
             </div>
 
-            <i (click)="sidebarVisible = true" class="pi pi-bars"></i>
             <i class="pi pi-heart" [routerLink]="cartItems>0?'cart-detail':null" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true">
                 <div class="number">{{cartItems}}</div>
             </i>
             <i class="pi pi-shopping-bag" routerLink="order" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true">
-                <!-- <div class="number">0</div> -->
             </i>
-            <!-- <span class="pkrSpan" *ngIf="IsUserSignedUp == true || IsUserLoggedIn == true">
-                <i class="pi pi-dollar"></i>
-                <span class="pkrValueSpan">0.00</span>
-            </span> -->
+            <i (click)="sidebarVisible = true" class="pi pi-bars"></i>
         </div>
 
     </div>

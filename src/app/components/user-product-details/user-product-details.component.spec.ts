@@ -1,14 +1,14 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProductDetailsComponent } from './product-details.component';
+import { UserProductDetailsComponent } from './user-product-details.component';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
-describe('ProductDetailsComponent', () => {
-  let component: ProductDetailsComponent;
-  let fixture: ComponentFixture<ProductDetailsComponent>;
+describe('UserProductDetailsComponent', () => {
+  let component: UserProductDetailsComponent;
+  let fixture: ComponentFixture<UserProductDetailsComponent>;
   let activatedRoute: ActivatedRoute;
-
+  
   beforeEach(() => {
     activatedRoute = {
       snapshot: {
@@ -18,15 +18,14 @@ describe('ProductDetailsComponent', () => {
         }
       }
     } as unknown as ActivatedRoute;
-
     TestBed.configureTestingModule({
-      declarations: [ProductDetailsComponent],
+      declarations: [UserProductDetailsComponent],
       imports:[HttpClientModule],
       providers: [
         { provide: ActivatedRoute, useValue: activatedRoute }
       ]
     });
-    fixture = TestBed.createComponent(ProductDetailsComponent);
+    fixture = TestBed.createComponent(UserProductDetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

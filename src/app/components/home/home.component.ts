@@ -30,10 +30,10 @@ export class HomeComponent {
       {
         img1: '../../../assets/Img/Category/img-5.jpg',
         img2: '../../../assets/Img/Category/img-5-1.jpg',
-        img3: '../../../assets/Img/Category/img-5-2.jpg',
-        type: 'Knife',
-        name: 'Hunting Knife',
-        rate: 52,
+        img3: '../../../assets/Img/Category/img-7.jpg',
+        type: 'Wheel Accessories',
+        name: 'Brakes',
+        rate: 1202,
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, debitis.',
         time: {
           d: 24,
@@ -45,11 +45,11 @@ export class HomeComponent {
       },
       {
         img1: '../../../assets/Img/Category/img-4.jpg',
-        img2: '../../../assets/Img/Category/img-4-1.jpg',
-        img3: '../../../assets/Img/Category/img-4-2.jpg',
-        type: 'Rifle',
-        name: 'Assault Rifle M-16',
-        rate: '500',
+        img2: '../../../assets/Img/Category/img-2.jpg',
+        img3: '../../../assets/Img/Category/img-3.jpg',
+        type: 'Engine Parts',
+        name: 'Car Engine',
+        rate: 241,
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, debitis.',
         time: {
           d: 40,
@@ -64,10 +64,10 @@ export class HomeComponent {
       {
         img1: '../../../assets/Img/Category/img-1.jpg',
         img2: '../../../assets/Img/Category/img-1-1.jpg',
-        img3: '../../../assets/Img/Category/img-1-4.jpg',
-        type: 'Pistol',
-        name: 'Derringers',
-        rate: 100,
+        img3: '../../../assets/Img/Category/img-1-2.jpg',
+        type: 'Wheel',
+        name: 'Car Wheel',
+        rate: 602,
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, debitis.',
         time: {
           d: 1,
@@ -79,11 +79,11 @@ export class HomeComponent {
       },
       {
         img1: '../../../assets/Img/Category/img-3.jpg',
-        img2: '../../../assets/Img/Category/img-3-1.jpg',
-        img3: '../../../assets/Img/Category/img-3-2.jpg',
-        type: 'Sniper',
-        name: 'Sako TRG',
-        rate: '1000',
+        img2: '../../../assets/Img/Category/img-6.jpg',
+        img3: '../../../assets/Img/Category/img-6-1.jpg',
+        type: 'Car Parts',
+        name: 'Body Parts',
+        rate: 122,
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, debitis.',
         time: {
           d: 20,
@@ -99,9 +99,9 @@ export class HomeComponent {
         img1: '../../../assets/Img/Category/img-2.jpg',
         img2: '../../../assets/Img/Category/img-2-1.jpg',
         img3: '../../../assets/Img/Category/img-2-2.jpg',
-        type: 'Grenade',
-        name: 'Flash Grenade',
-        rate: 15,
+        type: 'Car Parts',
+        name: 'Engine Filter',
+        rate: 38,
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, debitis.',
         time: {
           d: 10,
@@ -114,10 +114,10 @@ export class HomeComponent {
       {
         img1: '../../../assets/Img/Category/img-6.jpg',
         img2: '../../../assets/Img/Category/img-6-1.jpg',
-        img3: '../../../assets/Img/Category/img-6-2.jpg',
-        type: 'Armor',
-        name: 'Shield',
-        rate: '200',
+        img3: '../../../assets/Img/Category/img-7.jpg',
+        type: 'Car Inner Parts',
+        name: 'Car Seat Cushion',
+        rate: 890,
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, debitis.',
         time: {
           d: 0,
@@ -133,288 +133,169 @@ export class HomeComponent {
 
   profiles = [
     {
-      post: 'Sniper',
-      name: 'American Sniper.',
+      post: 'Mechanic',
+      name: 'John Smith',
       img: '../../../assets/Img/Profile/img-1.jpg',
-      text: `I recently purchased a gun from SAFA and I couldn't be happier with my experience. The website was easy to navigate, the ordering process was smooth, and the gun arrived quickly and in perfect condition.`
+      text: `I was looking for a specific part for my car, a 2001 Honda Civic, and I couldn't find it anywhere else. I was about to give up when I found your website. You had the part I needed, and the price was great. I ordered the part, and it arrived the next day. I was so happy with your service, and I would definitely recommend you to anyone looking for auto parts.`
     },
     {
-      post: 'Swordsman',
-      name: 'MR. Unknown',
+      post: 'Truck driver',
+      name: 'Jane Doe',
       img: '../../../assets/Img/Profile/img-2.jpg',
-      text: 'I highly recommend SAFA for purchasing guns online. Their selection is extensive, and their prices are competitive. The website is user-friendly, and their shipping and delivery were prompt and hassle-free.'
+      text: "I've been using your website for years, and I've always been happy with the service. You have a wide selection of parts for trucks, and the prices are always competitive. I've never had a problem with an order, and your customer service is excellent. I would definitely recommend your website to anyone looking for auto parts for trucks."
     },
     {
-      post: 'Heavy Weapons Operator',
-      name: 'MR. Nobody',
+      post: 'Sales representative',
+      name: 'Mary Jones',
       img: '../../../assets/Img/Profile/img-3.jpg',
-      text: `SAFA is my go-to online firearms retailer. They consistently provide excellent service, fast shipping, and competitive prices. I have purchased multiple guns from them, and I've never been disappointed.`
+      text: `I was in a bind when my car broke down, and I needed a part right away. I found your website, and I was able to order the part online. The part arrived the next day, and I was able to get my car fixed. I was so grateful for your quick and efficient service. I would definitely recommend your website to anyone in a similar situation.`
     },
   ]
   popularFeatured = [
     [
       {
         id: 1,
-        type: 'Pistol',
-        img: '../../../assets/Img/Category/img-1-1.jpg',
-        name: 'Derringers',
-        rate: 100,
+        type: 'Wheel',
+        img: '../../../assets/Img/Category/img-1.jpg',
+        name: 'Two Color Car Wheel',
+        rate: 602,
       },
       {
         id: 2,
-        type: 'Pistol',
-        img: '../../../assets/Img/Category/img-1-4.jpg',
-        name: 'Semi-automatic Pistols',
-        rate: 200,
+        type: 'Engine Accessories',
+        img: '../../../assets/Img/Category/img-2.jpg',
+        name: 'Alternator Engine Car',
+        rate: 38,
       },
       {
         id: 3,
-        type: 'Grenade',
-        img: '../../../assets/Img/Category/img-2-1.jpg',
-        name: 'Flash Grenade',
-        rate: 10,
+        type: 'Body Parts',
+        img: '../../../assets/Img/Category/img-3.jpg',
+        name: 'Car Body Parts',
+        rate: 122,
       },
+    ],
+    [
       {
         id: 4,
-        type: 'Grenade',
-        img: '../../../assets/Img/Category/img-2-2.jpg',
-        name: 'Smoke Grenade',
-        rate: 15,
-      },
-      {
-        id: 12,
-        type: 'Sniper',
-        img: '../../../assets/Img/Category/img-3-1.jpg',
-        name: 'Sako TRG',
-        rate: 1000,
+        type: 'Repaired Parts',
+        img: '../../../assets/Img/Category/img-4.jpg',
+        name: 'Repaired Car Engine',
+        rate: 241,
       },
       {
         id: 5,
-        type: 'Sniper',
-        img: '../../../assets/Img/Category/img-3-3.jpg',
-        name: 'Barrett M82/M107',
-        rate: 1700,
-      },
-      {
-        id: 18,
-        type: 'Rifle',
-        img: '../../../assets/Img/Category/img-4-3.jpg',
-        name: 'Lever-Action Rifle',
-        rate: 1370,
-      },
-      {
-        id: 19,
-        type: 'Rifle',
-        img: '../../../assets/Img/Category/img-4-4.jpg',
-        name: 'Semi-Automatic Rifle',
-        rate: 3120,
+        type: 'Brakes',
+        img: '../../../assets/Img/Category/img-5.jpg',
+        name: 'Brakes 1',
+        rate: 1202,
       },
       {
         id: 6,
-        type: 'Knife',
+        type: 'Brakes',
         img: '../../../assets/Img/Category/img-5-1.jpg',
-        name: 'Tactical Knife',
-        rate: 60,
-      },
-      {
-        id: 7,
-        type: 'Dagger',
-        img: '../../../assets/Img/Category/img-5-3.jpg',
-        name: 'Khanjar',
-        rate: 230,
+        name: 'Brakes 2',
+        rate: 902,
       },
     ],
     [
       {
-        id: 1,
-        type: 'Pistol',
-        img: '../../../assets/Img/Category/img-1-1.jpg',
-        name: 'Derringers',
-        rate: 100,
+        id: 7,
+        type: 'Car Parts',
+        img: '../../../assets/Img/Category/img-6.jpg',
+        name: 'Car Seat Cushion-1',
+        rate: 890,
       },
       {
         id: 8,
-        type: 'Pistol',
-        img: '../../../assets/Img/Category/img-1-2.jpg',
-        name: 'Pocket Pistols',
-        rate: 150,
-      },
-      {
-        id: 9,
-        type: 'Pistol',
-        img: '../../../assets/Img/Category/img-1-3.jpg',
-        name: 'Double-Action Pistols',
-        rate: 170,
-      },
-      {
-        id: 2,
-        type: 'Pistol',
-        img: '../../../assets/Img/Category/img-1-4.jpg',
-        name: 'Semi-automatic Pistols',
-        rate: 200,
-      },
-      {
-        id: 3,
-        type: 'Grenade',
-        img: '../../../assets/Img/Category/img-2-1.jpg',
-        name: 'Flash Grenade',
-        rate: 10,
-      },
-      {
-        id: 4,
-        type: 'Grenade',
-        img: '../../../assets/Img/Category/img-2-2.jpg',
-        name: 'Smoke Grenade',
-        rate: 15,
-      },
-      {
-        id: 10,
-        type: 'Grenade',
-        img: '../../../assets/Img/Category/img-2-3.jpg',
-        name: 'Concussion Grenade',
-        rate: 17,
-      },
-      {
-        id: 11,
-        type: 'Grenade',
-        img: '../../../assets/Img/Category/img-2-4.jpg',
-        name: 'Fragmentation Grenade',
-        rate: 20,
-      },
-    ],
-    [
-      {
-        id: 12,
-        type: 'Sniper',
-        img: '../../../assets/Img/Category/img-3-1.jpg',
-        name: 'Sako TRG',
-        rate: 1000,
-      },
-      {
-        id: 13,
-        type: 'Sniper',
-        img: '../../../assets/Img/Category/img-3-2.jpg',
-        name: 'Dragunov SVD',
-        rate: 1500,
-      },
-      {
-        id: 5,
-        type: 'Sniper',
-        img: '../../../assets/Img/Category/img-3-3.jpg',
-        name: 'Barrett M82/M107',
-        rate: 1700,
-      },
-      {
-        id: 15,
-        type: 'Sniper',
-        img: '../../../assets/Img/Category/img-3-4.jpg',
-        name: 'Mosin-Nagant M91/30',
-        rate: 2000,
-      },
-      {
-        id: 16,
-        type: 'Rifle',
-        img: '../../../assets/Img/Category/img-4-1-1.jpg',
-        name: 'Assault Rifle',
+        type: 'Car Parts',
+        img: '../../../assets/Img/Category/img-6-1.jpg',
+        name: 'Car Seat Cushion-2',
         rate: 900,
       },
       {
-        id: 17,
-        type: 'Rifle',
-        img: '../../../assets/Img/Category/img-4-2-2.jpg',
-        name: 'Bolt-Action Rifle',
-        rate: 1050,
-      },
-      {
-        id: 18,
-        type: 'Rifle',
-        img: '../../../assets/Img/Category/img-4-3.jpg',
-        name: 'Lever-Action Rifle',
-        rate: 1370,
-      },
-      {
-        id: 19,
-        type: 'Rifle',
-        img: '../../../assets/Img/Category/img-4-4.jpg',
-        name: 'Semi-Automatic Rifle',
-        rate: 3120,
+        id: 9,
+        type: 'Car Parts',
+        img: '../../../assets/Img/Category/img-7.jpg',
+        name: 'Car Steering',
+        rate: 122,
       },
     ],
   ];
 
   categories = [
     {
-      img: '../../../assets/Img/Category/img-1.jpg',
-      type: 'Pistol',
-      name: ['Derringers', 'Pocket Pistols', 'Double-Action Pistols', 'Semi-automatic Pistols']
+      img: '../../../assets/Img/Category/c-img-1.jpg',
+      type: 'Electrical',
+      name: ['Rickshaw', 'Scooter', 'Car', 'Truck']
     },
     {
-      img: '../../../assets/Img/Category/img-2.jpg',
-      type: 'Grenade',
-      name: ['Flash Grenade', 'Smoke Grenade', 'Concussion Grenade', 'Fragmentation Grenade']
+      img: '../../../assets/Img/Category/c-img-2.jpg',
+      type: 'Three Wheeler',
+      name: ['Auto Mechanic', 'Battery', 'Car', 'Sheet']
     },
     {
-      img: '../../../assets/Img/Category/img-3.jpg',
-      type: 'Sniper',
-      name: ['Sako TRG', 'Dragunov SVD', 'Barrett M82/M107', 'Mosin-Nagant M91/30']
+      img: '../../../assets/Img/Category/c-img-3.jpg',
+      type: 'Auto Mechanic',
+      name: ['Alloy Wheel', 'Car Repair', 'Driving', 'Service']
     },
     {
-      img: '../../../assets/Img/Category/img-4.jpg',
-      type: 'Rifle',
-      name: ['Assault Rifle', 'Bolt-Action Rifle', 'Lever-Action Rifle', 'Semi-Automatic Rifle']
+      img: '../../../assets/Img/Category/c-img-4.jpg',
+      type: 'Exterior',
+      name: ['Bike', 'Oem Parts', 'Software', 'Stock']
     },
     {
-      img: '../../../assets/Img/Category/img-5.jpg',
-      type: 'Knife',
-      name: ['Pocket Knife', 'Tactical Knife', 'Survival Knife', 'Hunting Knife']
+      img: '../../../assets/Img/Category/c-img-5.jpg',
+      type: 'Battery',
+      name: ['Alloy Wheel', 'Body', 'Car', 'Steering']
     },
     {
-      img: '../../../assets/Img/Category/img-6.jpg',
-      type: 'Armor',
-      name: ['Shield', 'Helmet', 'Plate Armor', 'Brigandine Armor']
+      img: '../../../assets/Img/Category/c-img-6.jpg',
+      type: 'Auto Repair',
+      name: ['Car Repair', 'Design', 'Software', 'Brakes']
     },
   ]
 
   specialProducts = [
     {
-      img: '../../../assets/Img/Latest Blog/img-1.jpg',
-      type: 'Pistol',
-      name: 'Desert Eagle',
-      rate: 200
+      img: '../../../assets/Img/Category/img-6.jpg',
+      type: 'Car Inner Parts',
+      name: 'Car Seat Cushion',
+      rate: 890
     },
     {
-      img: '../../../assets/Img/Latest Blog/img-2.jpg',
-      type: 'Rifle',
-      name: 'Assault Rifle M-16',
-      rate: 500
+      img: '../../../assets/Img/Category/img-1.jpg',
+      type: 'Wheel',
+      name: 'Two Color Car Wheel',
+      rate: 602
     },
     {
-      img: '../../../assets/Img/Latest Blog/img-3.jpg',
-      type: 'Auto-Rifle',
-      name: 'Kalashnikov (AK-47)',
-      rate: 2000
+      img: '../../../assets/Img/Category/img-2.jpg',
+      type: 'Engine Accessories',
+      name: 'Alternator Engine Car',
+      rate: 38
     },
   ]
 
   latestBlogCards = [
     {
       img: '../../../assets/Img/Latest Blog/img-1.jpg',
-      title: 'The Mighty Pistol: Unveiling the Power and Versatility',
-      desc: 'Discover the compact and formidable world of pistols, where precision meets portability. Explore their sleek designs, exceptional firepower, and their role as the ultimate tool for self-defense and personal protection.',
+      title: 'The Drive: A blog for car enthusiasts of all stripes.',
+      desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, officia eos? Explicabo ratione nam eveniet fugit excepturi at quod id.',
       date: 13,
       month: 'DEC'
     },
     {
       img: '../../../assets/Img/Latest Blog/img-2.jpg',
-      title: 'The Art of Long-Range Shooting: Exploring the World of Rifles',
-      desc: 'Delve into the world of rifles, where long-range precision meets raw firepower. Uncover the craftsmanship behind these versatile firearms, renowned for their accuracy, range, and impact, making them indispensable for hunting, marksmanship, and military applications.',
+      title: 'Autoblog: The latest news and reviews from the automotive world.',
+      desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, officia eos? Explicabo ratione nam eveniet fugit excepturi at quod id.',
       date: 17,
       month: 'JUL'
     },
     {
       img: '../../../assets/Img/Latest Blog/img-3.jpg',
-      title: 'AK-47: The Iconic Firearm That Shaped History',
-      desc: 'Step into the legendary realm of the AK-47, an iconic assault rifle that has left an indelible mark on history. Explore its rugged design, unparalleled reliability, and global impact, showcasing its role as a symbol of revolution, conflict, and cultural influence.',
+      title: 'Cycle World: The definitive resource for motorcycle enthusiasts.',
+      desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, officia eos? Explicabo ratione nam eveniet fugit excepturi at quod id.',
       date: 29,
       month: 'JUN'
     },

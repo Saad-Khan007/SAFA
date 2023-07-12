@@ -40,29 +40,29 @@ export class FooterComponent {
     {
       title: 'CONTACT US',
       items: [
-        'Address: Dara Adamkhel',
+        'Address: Lahore',
         'in Pakistan',
         'Call: 123-456-789',
-        'Email: safa@weapon.com'
+        'Email: safa@example.com'
       ]
     }
   ];
 
   externalLinks: string[] = [
-    'OpticsPlanet',
-    'AR500 Armor',
-    '5.11 Tactical',
-    'Tactical Gear Junkie',
-    'Cheaper Than Dirt',
-    'Police Gear',
-    'Tactical Distributors',
-    'GunMag Warehouse',
-    'Gun Safes',
-    'Alien Gear Holsters',
-    'US Patriot Tactical',
-    'Primary Arms',
-    'Bravo Company USA',
-    'Gun Pro Deals'
+    'Engine',
+    'Transmission',
+    'Driveshaft',
+    'Axles',
+    'Wheels',
+    'Tires',
+    'Brakes',
+    'Suspension',
+    'Steering',
+    'Body',
+    'Interior',
+    'Windows',
+    'Mirrors',
+    'Lights'
   ];
 }
 

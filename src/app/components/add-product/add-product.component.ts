@@ -14,35 +14,58 @@ export class AddProductComponent {
   form: FormGroup;
   msgSent: boolean = false;
   options: any = [
-    "../../../assets/Img/Category/img-1.jpg",
-    "../../../assets/Img/Category/img-1-1.jpg",
-    "../../../assets/Img/Category/img-1-2.jpg",
-    "../../../assets/Img/Category/img-1-3.jpg",
-    "../../../assets/Img/Category/img-1-4.jpg",
-    "../../../assets/Img/Category/img-2.jpg",
-    "../../../assets/Img/Category/img-2-1.jpg",
-    "../../../assets/Img/Category/img-2-2.jpg",
-    "../../../assets/Img/Category/img-2-3.jpg",
-    "../../../assets/Img/Category/img-2-4.jpg",
-    "../../../assets/Img/Category/img-3.jpg",
-    "../../../assets/Img/Category/img-3-1.jpg",
-    "../../../assets/Img/Category/img-3-2.jpg",
-    "../../../assets/Img/Category/img-3-3.jpg",
-    "../../../assets/Img/Category/img-3-4.jpg",
-    "../../../assets/Img/Category/img-4.jpg",
-    "../../../assets/Img/Category/img-4-1-1.jpg",
-    "../../../assets/Img/Category/img-4-2-2.jpg",
-    "../../../assets/Img/Category/img-4-1.jpg",
-    "../../../assets/Img/Category/img-4-2.jpg",
-    "../../../assets/Img/Category/img-4-3.jpg",
-    "../../../assets/Img/Category/img-4-4.jpg",
-    "../../../assets/Img/Category/img-5.jpg",
-    "../../../assets/Img/Category/img-5-1.jpg",
-    "../../../assets/Img/Category/img-5-2.jpg",
-    "../../../assets/Img/Category/img-5-3.jpg",
-    "../../../assets/Img/Category/img-6.jpg",
-    "../../../assets/Img/Category/img-6-1.jpg",
-    "../../../assets/Img/Category/img-6-2.jpg",
+    {
+      img: "../../../assets/Img/Category/img-1-1.jpg",
+      name: "Wheel 1"
+    },
+    {
+      img: "../../../assets/Img/Category/img-1.jpg",
+      name: "Wheel 2"
+    },
+    {
+      img: "../../../assets/Img/Category/img-1-2.jpg",
+      name: "Wheel 3"
+    },
+    {
+      img: "../../../assets/Img/Category/img-2.jpg",
+      name: "Alternator Engine Car"
+    },
+    {
+      img: "../../../assets/Img/Category/img-2-1.jpg",
+      name: "Engine 1"
+    },
+    {
+      img: "../../../assets/Img/Category/img-2-2.jpg",
+      name: "Engine 2"
+    },
+    {
+      img: "../../../assets/Img/Category/img-3.jpg",
+      name: "Car Bumper"
+    },
+    {
+      img: "../../../assets/Img/Category/img-4.jpg",
+      name: "Engine Motor"
+    },
+    {
+      img: "../../../assets/Img/Category/img-5.jpg",
+      name: "Brake 1"
+    },
+    {
+      img: "../../../assets/Img/Category/img-5-1.jpg",
+      name: "Brake 2"
+    },
+    {
+      img: "../../../assets/Img/Category/img-6.jpg",
+      name: "Car Cushion Seat 1"
+    },
+    {
+      img: "../../../assets/Img/Category/img-6-1.jpg",
+      name: "Car Cushion Seat 2"
+    },
+    {
+      img: "../../../assets/Img/Category/img-7.jpg",
+      name: "Car Steering"
+    },
   ];
   constructor(private formBuilder: FormBuilder, private productService: ProductServiceService, private router: Router) {
     this.form = this.formBuilder.group({
