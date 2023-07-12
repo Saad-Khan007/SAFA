@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContactComponent } from './contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('ContactComponent', () => {
   let component: ContactComponent;
@@ -8,7 +9,10 @@ describe('ContactComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ContactComponent]
+      declarations: [ContactComponent],
+      imports: [
+        ReactiveFormsModule
+      ]
     });
     fixture = TestBed.createComponent(ContactComponent);
     component = fixture.componentInstance;

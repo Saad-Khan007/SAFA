@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MyOrderComponent } from './my-order.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('MyOrderComponent', () => {
   let component: MyOrderComponent;
@@ -8,7 +9,8 @@ describe('MyOrderComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [MyOrderComponent]
+      declarations: [MyOrderComponent],
+      imports:[HttpClientModule]
     });
     fixture = TestBed.createComponent(MyOrderComponent);
     component = fixture.componentInstance;
