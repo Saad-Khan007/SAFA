@@ -40,4 +40,24 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should popular_Id to 1', () => {
+    component.popFunc(1);
+    
+    expect(component.popular_Id).toBe(1);
+  });
+
+  it('should popular_Id to 1', () => {
+    component.popular_Id = 2
+    component.popArrowFunc('prev','popular');
+
+    expect(component.popular_Id).toBe(1);
+  });
+
+  it('should popular_Id to 1', () => {
+    component.popular_Id = 2
+    component.popArrowFunc('next','popular');
+
+    expect(component.popular_Id).toBe(3);
+  });
 });

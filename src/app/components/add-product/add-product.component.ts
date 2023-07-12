@@ -76,7 +76,6 @@ export class AddProductComponent {
       Image: [null, [Validators.required]],
     });
   }
-  fakeVariable:number[] = []
   submit() {
     if (this.form.valid) {
       const formData: Product = {
@@ -86,15 +85,12 @@ export class AddProductComponent {
         img: `${this.form.value.Image}`,
         rate: this.form.value.Price,
       };
-      this.fakeVariable.push(0)
       this.productService.addProduct(formData).subscribe(res => {
-        this.fakeVariable.push(1)
         if (res) {
-          this.fakeVariable.push(2)
           this.msgSent = true;
         }
         setTimeout(() => {
-          // this.msgSent = false;
+          this.msgSent = false;
           this.form.reset();
           this.router.navigate(['product-list'])
         }, 3000)

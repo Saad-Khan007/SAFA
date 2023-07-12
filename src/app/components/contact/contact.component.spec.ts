@@ -22,4 +22,11 @@ describe('ContactComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should be run successfully', () => {
+    spyOn(component,'getTime')
+    component.submit();
+    expect(component.getTime).toHaveBeenCalled();
+  });
+
 });
